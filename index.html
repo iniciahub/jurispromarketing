@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurisPró Marketing | A Advocacia no Digital com Ética e Resultados</title>
+    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia. Construa sua autoridade digital e atraia clientes qualificados.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Variáveis CSS */
+        :root {
+            --primary-color: #1a2a4e; /* Azul Escuro (quase preto) */
+            --secondary-color: #e0b462; /* Dourado/Bronze */
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --gray-text: #555;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+        }
+
+        /* Reset Básico e Box Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Rolagem suave para os âncoras */
+        }
+
+        /* Estilos Gerais */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Header e Navegação */
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            flex-shrink: 0;
+        }
+        .logo {
+            width: 160px; /* Ajuste conforme o tamanho real da sua logo */
+            height: auto;
+            filter: brightness(200%); /* Clareia a logo para fundo escuro */
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        .nav-menu a {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1em;
+            padding: 5px 0;
+            position: relative;
+        }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Botão Hamburguer (Mobile) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: var(--white);
+            margin-bottom: 5px;
+            border-radius: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+        /* Efeito para o X */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Hero Section (Home) */
+        .hero-home {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover; /* Imagem de fundo */
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh; /* Altura mínima para mobile */
+        }
+        .hero-home h1 {
+            font-size: 3.2em;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-weight: 700;
+            max-width: 900px;
+        }
+        .hero-home h2 {
+            font-size: 1.4em;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 800px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Hero Section (Páginas Internas - adaptado para seções) */
+        .hero-internal {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?law,firm') no-repeat center center/cover; /* Imagem de fundo */
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px 60px; /* Menos padding inferior para seções internas */
+            min-height: 30vh; /* Altura menor */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-internal h1 {
+            font-size: 3em;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        .hero-internal p {
+            font-size: 1.2em;
+            color: rgba(255,255,255,0.9);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        section:nth-of-type(odd) { /* Para alternar cor de fundo */
+            background-color: var(--light-bg);
+        }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            color: var(--gray-text);
+        }
+
+        /* Seção de Problemas */
+        .problem-section ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .problem-section ul li {
+            background-color: var(--white);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 5px;
+            font-size: 1.1em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            color: var(--text-color);
+        }
+
+        /* Grid de Serviços/Diferenciais */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .grid-item {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .grid-item h3 {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .grid-item p {
+            font-size: 1em;
+            margin-bottom: 0;
+            color: var(--gray-text);
+        }
+
+        /* Seção de Processo */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .step-item {
+            flex: 1 1 300px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+        }
+        .step-item .step-number {
+            font-size: 3em;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        .step-item h3 {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Seção de Depoimentos */
+        .testimonials-section {
+            background-color: var(--light-bg);
+        }
+        .testimonial-item {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 700px;
+            margin: 30px auto;
+            font-style: italic;
+            font-size: 1.1em;
+            position: relative;
+            color: var(--text-color);
+        }
+        .testimonial-item::before {
+            content: '“';
+            font-family: serif;
+            font-size: 4em;
+            color: var(--secondary-color);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.2;
+        }
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 20px;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--white);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.2em;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5em;
+            margin-left: 10px;
+            color: var(--secondary-color);
+        }
+        .faq-question.active::after {
+            content: '-';
+        }
+        .faq-answer {
+            margin-top: 10px;
+            font-size: 1em;
+            color: var(--gray-text);
+            display: none;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* Formulário de Contato */
+        .contact-form-section {
+            padding: 60px 20px;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+        .contact-form-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .contact-form-section p {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .contact-form div {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+        }
+        .contact-form small {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .contact-form button[type="submit"] {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .contact-form button[type="submit"]:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-links {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: var(--gray-text);
+        }
+        .contact-links a {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .contact-links a.whatsapp-link {
+            color: var(--whatsapp-green);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer .logo-container {
+            margin-bottom: 20px;
+        }
+        footer .logo {
+            filter: brightness(200%); /* Clareia a logo para fundo escuro */
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+        }
+        footer ul li a {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+        }
+        footer ul li a:hover {
+            color: var(--secondary-color);
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: var(--white);
+            font-size: 1.8em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-dark);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .nav-menu {
+                display: none; /* Esconde o menu em telas menores */
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 70px; /* Ajuste conforme a altura do seu header */
+                left: 0;
+                padding-bottom: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-menu.active {
+                display: flex; /* Mostra o menu quando ativo */
+            }
+            .nav-menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .hamburger {
+                display: flex; /* Mostra o hamburguer */
+            }
+            .hero-home h1, .hero-internal h1 {
+                font-size: 2.5em;
+            }
+            .hero-home h2, .hero-internal p {
+                font-size: 1.2em;
+            }
+            section {
+                padding: 60px 15px;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .grid-layout, .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .step-item {
+                flex: none;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+            footer ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="#home">
+                    <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753971112/20250731_1109_Logo_Transparente_Jur%C3%ADdica_remix_01k1gcwcnafcybjqme2fdknqzn_s0xnew.png" alt="JurisPró Marketing Logo" class="logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#etica-oab">Ética & OAB</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-home" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover;">
+            <div class="container">
+                <h1>JurisPró Marketing: A Excelência Jurídica no Digital, com Ética e Resultados.</h1>
+                <h2>Transformamos a presença online de advogados e escritórios em João Pessoa e em todo o Brasil, impulsionando sua autoridade e atraindo clientes qualificados, sempre em conformidade com a OAB.</h2>
+                <a href="#contato" class="btn">Agende Sua Consultoria Gratuita</a>
+            </div>
+        </section>
+
+        <section class="problem-section">
+            <div class="container">
+                <h2>Seus Desafios de Marketing na Advocacia Encontram Solução Aqui.</h2>
+                <p>No cenário jurídico atual, apenas a excelência técnica já não basta para alcançar o sucesso. Muitos advogados e escritórios em João Pessoa enfrentam:</p>
+                <ul>
+                    <li>⏳ Falta de tempo para se dedicar à presença online.</li>
+                    <li>🚨 Medo de violar as normas da OAB sobre publicidade.</li>
+                    <li>👥 Dificuldade em atrair novos clientes de forma ética.</li>
+                    <li>📈 Concorrência acirrada e a necessidade de se diferenciar.</li>
+                </ul>
+                <p style="margin-top: 30px;">Se você busca um crescimento sustentável e estratégico para sua banca, nós temos a solução.</p>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?team,collaboration,professional') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Nossa Essência: A Força da Ética e Estratégia na Advocacia Digital.</h1>
+                <p>Paixão pela advocacia, expertise em marketing digital e compromisso inabalável com a ética. Conheça a JurisPró Marketing.</p>
+            </div>
+        </section>
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Uma Jornada Pelo Sucesso Ético na Advocacia Digital.</h2>
+                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em João Pessoa (e em todo o Brasil) se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com **experiência consolidada em marketing e uma visão aprofundada do universo jurídico**, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
+                <p>Desde então, nos dedicamos a construir pontes entre a advocacia e o mundo digital, sempre priorizando a conformidade com as normas da OAB e a entrega de resultados que realmente fazem a diferença para a carreira de nossos clientes.</p>
+            </div>
+        </section>
+
+        <section class="value-proposition-section">
+            <div class="container">
+                <h2>Nossa Missão, Visão e Valores.</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <h3>Missão</h3>
+                        <p>Impulsionar o reconhecimento e o crescimento de advogados e escritórios de advocacia por meio de estratégias de marketing digital inovadoras, éticas e focadas em resultados, garantindo total conformidade com as normas da OAB.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Visão</h3>
+                        <p>Ser a agência de marketing jurídico referência no Brasil, reconhecida pela excelência, ética inabalável e pela capacidade de transformar a presença digital de profissionais do direito em ativos de alto valor.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Valores</h3>
+                        <ul class="content-list" style="margin-top: 20px; text-align: left; max-width: none;">
+                            <li>**Ética e Transparência:** Atuamos com a máxima integridade e clareza em todas as nossas relações.</li>
+                            <li>**Excelência e Inovação:** Buscamos sempre as melhores soluções e estamos em constante atualização.</li>
+                            <li>**Parceria e Confiança:** Construímos relacionamentos duradouros baseados no respeito e na colaboração mútua.</li>
+                            <li>**Resultados e Responsabilidade:** Nosso foco é o crescimento do cliente, com responsabilidade e mensuração.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Mentes Estratégicas por Trás do Seu Sucesso.</h2>
+                <p>Conheça os profissionais que compõem a JurisPró Marketing. Uma equipe multidisciplinar de especialistas em marketing digital, comunicação e, acima de tudo, apaixonados pelo universo jurídico e pela sua ética.</p>
+                <div class="grid-layout" style="margin-top: 40px;">
+                    <div class="grid-item">
+                        <img src="https://lh3.googleusercontent.com/file_content/0" alt="Foto de Ademir Rodrigues" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <h3>Ademir Rodrigues</h3>
+                        <p>CEO & Fundador</p>
+                        <p style="font-size: 0.9em;">Com vasta experiência em marketing digital e uma paixão pela ética jurídica, Ademir lidera a equipe com foco em inovação e resultados para a advocacia.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://via.placeholder.com/150x150?text=Especialista" alt="Foto do Especialista em Conteúdo" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <h3>Especialista em Conteúdo</h3>
+                        <p>Content Strategist</p>
+                        <p style="font-size: 0.9em;">Responsável por criar narrativas jurídicas envolventes e informativas, garantindo que cada palavra transmita autoridade e esteja em conformidade com a OAB.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://via.placeholder.com/150x150?text=SEO" alt="Foto do Especialista em SEO" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <h3>Especialista em SEO</h3>
+                        <p>SEO Lead</p>
+                        <p style="font-size: 0.9em;">Arquiteto de visibilidade online, focado em estratégias de SEO para que seu escritório seja encontrado e posicionado no topo das buscas pelos clientes certos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?digital,marketing,strategy') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Nossas Soluções: Impulsionando Sua Advocacia com Estratégia e Ética.</h1>
+                <p>Oferecemos um portfólio completo de soluções digitais pensadas exclusivamente para as necessidades de advogados e escritórios de advocacia.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Descubra Como Podemos Transformar Sua Presença Online:</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <h3>Marketing de Conteúdo Jurídico Estratégico</h3>
+                        <p>Desenvolvemos artigos, e-books, e posts que posicionam você como uma autoridade inquestionável em sua área, atraindo clientes qualificados e respeitando as diretrizes da OAB.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Gestão de Redes Sociais e Presença Digital</h3>
+                        <p>Criamos e gerenciamos seus perfis em plataformas como Instagram e LinkedIn, com um planejamento editorial ético e postagens de alto impacto visual e informativo.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>SEO para Advogados (Otimização para Mecanismos de Busca)</h3>
+                        <p>Otimizamos seu site e conteúdo para que apareçam nas primeiras posições do Google, conectando você a quem busca por serviços jurídicos em João Pessoa e região.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Criação e Otimização de Sites e Blogs Jurídicos</h3>
+                        <p>Desenvolvemos sites modernos, intuitivos e em conformidade com a OAB, que funcionam como sua principal vitrine digital e centralizam sua autoridade.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Consultoria em Marketing Jurídico Personalizada</h3>
+                        <p>Orientação focada nas suas necessidades específicas, com análise da sua situação e um plano de ação estratégico e ético para o seu crescimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="etica-oab" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?justice,ethics,law') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Ética e Conformidade: O Pilar da Sua Presença Digital na Advocacia.</h1>
+                <p>Na JurisPró Marketing, a ética é o alicerce de todas as nossas estratégias, garantindo sua segurança e credibilidade online.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Descubra Como Garantimos Seu Sucesso com Integridade:</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <h3>Total Conformidade ao Provimento nº 205/2021 da OAB</h3>
+                        <p>Todas as nossas ações de marketing são rigorosamente planejadas e executadas em estrita observância ao Provimento nº 205/2021 do Conselho Federal da OAB. Sua publicidade será sempre informativa, discreta e focada na valorização da sua expertise jurídica, evitando riscos de sanções.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Marketing de Conteúdo que Educa, Não Mercantiliza</h3>
+                        <p>Priorizamos a criação de conteúdo jurídico de valor que informa, educa e esclarece dúvidas do público. Posicione-se como uma fonte confiável de conhecimento, e não como um mero "vendedor de serviços", fortalecendo o respeito pela sua profissão.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Transparência e Clareza em Cada Passo</h3>
+                        <p>Mantemos uma comunicação transparente com nossos clientes sobre as diretrizes da OAB e como cada estratégia se encaixa nelas. Você terá total controle e compreensão sobre suas ações de marketing, alinhadas à realidade ética.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Foco na Construção de Autoridade e Reputação</h3>
+                        <p>Mais do que gerar cliques, nosso foco é construir sua autoridade digital e fortalecer sua reputação no mercado. Atraia clientes que valorizam sua especialização e experiência, e não apenas o preço.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?success,business,growth') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Nossos Cases de Sucesso: Resultados Reais na Advocacia Digital.</h1>
+                <p>Veja como a JurisPró Marketing transformou a presença online de advogados e escritórios, impulsionando sua autoridade e visibilidade.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Histórias de Crescimento e Destaque.</h2>
+                <p>Nesta seção, compartilhamos os resultados concretos alcançados por nossos clientes. Priorizamos a ética e a discrição, focando nos benefícios e no crescimento da autoridade jurídica no ambiente digital.</p>
+                <p style="font-style: italic; margin-top: 30px;">(Em breve, você encontrará aqui exemplos de como ajudamos advogados a:</p>
+                <ul class="content-list" style="margin-top: 20px; text-align: left; max-width: none;">
+                    <li>Aumentar a visibilidade orgânica em mecanismos de busca.</li>
+                    <li>Construir uma presença forte e ética nas redes sociais.</li>
+                    <li>Gerar mais reconhecimento e autoridade em suas áreas de atuação.</li>
+                    <li>Atrair clientes mais qualificados e alinhados com seus serviços.)</li>
+                </ul>
+                <p style="margin-top: 40px;">Fique atento(a) para as novidades e inspirações que traremos em breve!</p>
+            </div>
+        </section>
+
+        <section id="blog" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?blog,articles,knowledge') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Blog: Conhecimento e Estratégia para Sua Advocacia.</h1>
+                <p>Acompanhe as últimas tendências, dicas e análises sobre marketing jurídico ético e estratégico. Seu guia para o sucesso digital.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Últimas Publicações:</h2>
+                <div class="grid-layout">
+                    <div class="grid-item" style="text-align: left;">
+                        <img src="https://via.placeholder.com/400x250?text=Post+1" alt="Imagem do Post 1" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                        <h3>Provimento 205/2021: O Guia Definitivo para Advogados no Digital.</h3>
+                        <p style="font-size: 0.9em; color: #777;">Publicado em: 15 de Julho, 2025</p>
+                        <p style="font-size: 1em;">Desvende as regras da OAB sobre publicidade jurídica e saiba o que é permitido e o que não é na internet.</p>
+                        <a href="#blog" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9em;">Leia Mais</a>
+                    </div>
+                    <div class="grid-item" style="text-align: left;">
+                        <img src="https://via.placeholder.com/400x250?text=Post+2" alt="Imagem do Post 2" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                        <h3>SEO para Advogados: 3 Passos para Ser Encontrado no Google em João Pessoa!</h3>
+                        <p style="font-size: 0.9em; color: #777;">Publicado em: 24 de Julho, 2025</p>
+                        <p style="font-size: 1em;">Descubra como otimizar sua presença online e atrair clientes locais que procuram por seus serviços jurídicos.</p>
+                        <a href="#blog" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9em;">Leia Mais</a>
+                    </div>
+                    <div class="grid-item" style="text-align: left;">
+                        <img src="https://via.placeholder.com/400x250?text=Post+3" alt="Imagem do Post 3" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                        <h3>Personal Branding para Advogados: Construa sua Marca Forte e Ética no Digital.</h3>
+                        <p style="font-size: 0.9em; color: #777;">Publicado em: 30 de Julho, 2025</p>
+                        <p style="font-size: 1em;">Aprenda a diferenciar-se no mercado e a solidificar sua reputação como um profissional de referência.</p>
+                        <a href="#blog" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9em;">Leia Mais</a>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; font-style: italic; color: var(--gray-text);">*Este é o espaço para os artigos do seu calendário editorial. Mantenha seu blog atualizado!</p>
+            </div>
+        </section>
+
+        <section id="contato" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?contact,phone,email') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Fale Conosco: Sua Advocacia Merece Destaque.</h1>
+                <p>Preencha o formulário ou use nossos canais diretos para agendar sua consultoria gratuita. Estamos prontos para te ajudar!</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section" style="background-color: var(--white);">
+            <div class="container">
+                <h2>Agende Sua Consultoria Gratuita e Estratégica!</h2>
+                <p>Preencha o formulário abaixo. **(Lembre-se: Para enviar esses dados, você precisará copiá-los e colar na conversa de WhatsApp ou em um e-mail.)**</p>
+
+                <form id="contactForm" class="contact-form"> <div>
+                        <label for="nome">Nome Completo do Advogado(a)*</label>
+                        <input type="text" id="nome" name="nome_completo" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail Profissional*</label>
+                        <input type="email" id="email" name="email_profissional" required>
+                    </div>
+
+                    <div>
+                        <label for="whatsapp-form">Telefone / WhatsApp*</label>
+                        <input type="tel" id="whatsapp-form" name="telefone_whatsapp" required pattern="[0-9]{11}" placeholder="Ex: 83996999840">
+                        <small>Formato: DDNNNNNNNNN (apenas números, 11 dígitos)</small>
+                    </div>
+
+                    <div>
+                        <label for="escritorio">Nome do Escritório (se houver)</label>
+                        <input type="text" id="escritorio" name="nome_escritorio">
+                    </div>
+
+                    <div>
+                        <label for="area_atuacao">Principal(is) Área(s) de Atuação Jurídica*</label>
+                        <input type="text" id="area_atuacao" name="area_atuacao" required placeholder="Ex: Direito Civil, Penal, Empresarial">
+                    </div>
+
+                    <div>
+                        <label for="desafio">Qual seu maior desafio de marketing jurídico hoje?*</label>
+                        <textarea id="desafio" name="maior_desafio" rows="4" required placeholder="Ex: Atrair mais clientes, construir autoridade online, entender as regras da OAB..."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="orcamento">Qual o seu orçamento aproximado para investir em marketing por mês?</label>
+                        <select id="orcamento" name="orcamento_aproximado">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Ate_1000">Até R$ 1.000</option>
+                            <option value="1000_3000">R$ 1.000 - R$ 3.000</option>
+                            <option value="3000_5000">R$ 3.000 - R$ 5.000</option>
+                            <option value="Mais_5000">Acima de R$ 5.000</option>
+                            <option value="Nao_Definido">Ainda não definido</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="como_conheceu">Como você conheceu a JurisPró Marketing?</label>
+                        <select id="como_conheceu" name="como_conheceu">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="LinkedIn">LinkedIn</s econdary-color);
+        }
+        .contact-form small {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .contact-form button[type="submit"] { /* Agora é tipo submit para a função JS local */
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .contact-form button[type="submit"]:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .contact-links {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: var(--gray-text);
+        }
+        .contact-links a {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .contact-links a.whatsapp-link {
+            color: var(--whatsapp-green);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer .logo-container {
+            margin-bottom: 20px;
+        }
+        footer .logo {
+            filter: brightness(200%); /* Clareia a logo para fundo escuro */
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+        }
+        footer ul li a {
+            color: rgba(255,255,255,0.9);
+            font-weight: 500;
+        }
+        footer ul li a:hover {
+            color: var(--secondary-color);
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: var(--white);
+            font-size: 1.8em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Botão Flutuante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp-green);
+            color: var(--white);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-dark);
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .nav-menu {
+                display: none; /* Esconde o menu em telas menores */
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 70px; /* Ajuste conforme a altura do seu header */
+                left: 0;
+                padding-bottom: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            .nav-menu.active {
+                display: flex; /* Mostra o menu quando ativo */
+            }
+            .nav-menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .hamburger {
+                display: flex; /* Mostra o hamburguer */
+            }
+            .hero-home h1, .hero-internal h1 {
+                font-size: 2.5em;
+            }
+            .hero-home h2, .hero-internal p {
+                font-size: 1.2em;
+            }
+            section {
+                padding: 60px 15px;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .grid-layout, .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .step-item {
+                flex: none;
+            }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 25px;
+            }
+            footer ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo-container">
+                <a href="#home">
+                    <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753971112/20250731_1109_Logo_Transparente_Jur%C3%ADdica_remix_01k1gcwcnafcybjqme2fdknqzn_s0xnew.png" alt="JurisPró Marketing Logo" class="logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#etica-oab">Ética & OAB</a></li>
+                    <li><a href="#cases">Cases</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-home" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover;">
+            <div class="container">
+                <h1>JurisPró Marketing: A Excelência Jurídica no Digital, com Ética e Resultados.</h1>
+                <h2>Transformamos a presença online de advogados e escritórios em João Pessoa e em todo o Brasil, impulsionando sua autoridade e atraindo clientes qualificados, sempre em conformidade com a OAB.</h2>
+                <a href="#contato" class="btn">Agende Sua Consultoria Gratuita</a>
+            </div>
+        </section>
+
+        <section class="problem-section">
+            <div class="container">
+                <h2>Seus Desafios de Marketing na Advocacia Encontram Solução Aqui.</h2>
+                <p>No cenário jurídico atual, apenas a excelência técnica já não basta para alcançar o sucesso. Muitos advogados e escritórios em João Pessoa enfrentam:</p>
+                <ul>
+                    <li>⏳ Falta de tempo para se dedicar à presença online.</li>
+                    <li>🚨 Medo de violar as normas da OAB sobre publicidade.</li>
+                    <li>👥 Dificuldade em atrair novos clientes de forma ética.</li>
+                    <li>📈 Concorrência acirrada e a necessidade de se diferenciar.</li>
+                </ul>
+                <p style="margin-top: 30px;">Se você busca um crescimento sustentável e estratégico para sua banca, nós temos a solução.</p>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?team,collaboration,professional') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Nossa Essência: A Força da Ética e Estratégia na Advocacia Digital.</h1>
+                <p>Paixão pela advocacia, expertise em marketing digital e compromisso inabalável com a ética. Conheça a JurisPró Marketing.</p>
+            </div>
+        </section>
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Uma Jornada Pelo Sucesso Ético na Advocacia Digital.</h2>
+                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em João Pessoa (e em todo o Brasil) se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com **experiência consolidada em marketing e uma visão aprofundada do universo jurídico**, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
+                <p>Desde então, nos dedicamos a construir pontes entre a advocacia e o mundo digital, sempre priorizando a conformidade com as normas da OAB e a entrega de resultados que realmente fazem a diferença para a carreira de nossos clientes.</p>
+            </div>
+        </section>
+
+        <section class="value-proposition-section">
+            <div class="container">
+                <h2>Nossa Missão, Visão e Valores.</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <h3>Missão</h3>
+                        <p>Impulsionar o reconhecimento e o crescimento de advogados e escritórios de advocacia por meio de estratégias de marketing digital inovadoras, éticas e focadas em resultados, garantindo total conformidade com as normas da OAB.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Visão</h3>
+                        <p>Ser a agência de marketing jurídico referência no Brasil, reconhecida pela excelência, ética inabalável e pela capacidade de transformar a presença digital de profissionais do direito em ativos de alto valor.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Valores</h3>
+                        <ul class="content-list" style="margin-top: 20px; text-align: left; max-width: none;">
+                            <li>**Ética e Transparência:** Atuamos com a máxima integridade e clareza em todas as nossas relações.</li>
+                            <li>**Excelência e Inovação:** Buscamos sempre as melhores soluções e estamos em constante atualização.</li>
+                            <li>**Parceria e Confiança:** Construímos relacionamentos duradouros baseados no respeito e na colaboração mútua.</li>
+                            <li>**Resultados e Responsabilidade:** Nosso foco é o crescimento do cliente, com responsabilidade e mensuração.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Mentes Estratégicas por Trás do Seu Sucesso.</h2>
+                <p>Conheça os profissionais que compõem a JurisPró Marketing. Uma equipe multidisciplinar de especialistas em marketing digital, comunicação e, acima de tudo, apaixonados pelo universo jurídico e pela sua ética.</p>
+                <div class="grid-layout" style="margin-top: 40px;">
+                    <div class="grid-item">
+                        <img src="https://lh3.googleusercontent.com/file_content/0" alt="Foto de Ademir Rodrigues" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <h3>Ademir Rodrigues</h3>
+                        <p>CEO & Fundador</p>
+                        <p style="font-size: 0.9em;">Com vasta experiência em marketing digital e uma paixão pela ética jurídica, Ademir lidera a equipe com foco em inovação e resultados para a advocacia.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://via.placeholder.com/150x150?text=Especialista" alt="Foto do Especialista em Conteúdo" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <h3>Especialista em Conteúdo</h3>
+                        <p>Content Strategist</p>
+                        <p style="font-size: 0.9em;">Responsável por criar narrativas jurídicas envolventes e informativas, garantindo que cada palavra transmita autoridade e esteja em conformidade com a OAB.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://via.placeholder.com/150x150?text=SEO" alt="Foto do Especialista em SEO" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <h3>Especialista em SEO</h3>
+                        <p>SEO Lead</p>
+                        <p style="font-size: 0.9em;">Arquiteto de visibilidade online, focado em estratégias de SEO para que seu escritório seja encontrado e posicionado no topo das buscas pelos clientes certos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?digital,marketing,strategy') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Nossas Soluções: Impulsionando Sua Advocacia com Estratégia e Ética.</h1>
+                <p>Oferecemos um portfólio completo de soluções digitais pensadas exclusivamente para as necessidades de advogados e escritórios de advocacia.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Descubra Como Podemos Transformar Sua Presença Online:</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <h3>Marketing de Conteúdo Jurídico Estratégico</h3>
+                        <p>Desenvolvemos artigos, e-books, e posts que posicionam você como uma autoridade inquestionável em sua área, atraindo clientes qualificados e respeitando as diretrizes da OAB.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Gestão de Redes Sociais e Presença Digital</h3>
+                        <p>Criamos e gerenciamos seus perfis em plataformas como Instagram e LinkedIn, com um planejamento editorial ético e postagens de alto impacto visual e informativo.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>SEO para Advogados (Otimização para Mecanismos de Busca)</h3>
+                        <p>Otimizamos seu site e conteúdo para que apareçam nas primeiras posições do Google, conectando você a quem busca por serviços jurídicos em João Pessoa e região.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Criação e Otimização de Sites e Blogs Jurídicos</h3>
+                        <p>Desenvolvemos sites modernos, intuitivos e em conformidade com a OAB, que funcionam como sua principal vitrine digital e centralizam sua autoridade.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Consultoria em Marketing Jurídico Personalizada</h3>
+                        <p>Orientação focada nas suas necessidades específicas, com análise da sua situação e um plano de ação estratégico e ético para o seu crescimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="etica-oab" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?justice,ethics,law') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Ética e Conformidade: O Pilar da Sua Presença Digital na Advocacia.</h1>
+                <p>Na JurisPró Marketing, a ética é o alicerce de todas as nossas estratégias, garantindo sua segurança e credibilidade online.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Descubra Como Garantimos Seu Sucesso com Integridade:</h2>
+                <div class="grid-layout">
+                    <div class="grid-item">
+                        <h3>Total Conformidade ao Provimento nº 205/2021 da OAB</h3>
+                        <p>Todas as nossas ações de marketing são rigorosamente planejadas e executadas em estrita observância ao Provimento nº 205/2021 do Conselho Federal da OAB. Sua publicidade será sempre informativa, discreta e focada na valorização da sua expertise jurídica, evitando riscos de sanções.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Marketing de Conteúdo que Educa, Não Mercantiliza</h3>
+                        <p>Priorizamos a criação de conteúdo jurídico de valor que informa, educa e esclarece dúvidas do público. Posicione-se como uma fonte confiável de conhecimento, e não como um mero "vendedor de serviços", fortalecendo o respeito pela sua profissão.</p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Transparência e Clareza em Cada Passo</h3>
+                        <p>Mantemos uma comunicação transparente com nossos clientes sobre as diretrizes da OAB e como cada estratégia se encaixa nelas. Você terá total controle e compreensão sobre suas ações de marketing, alinhadas à realidade ética.</p>
+                    < /div>
+                    <div class="grid-item">
+                        <h3>Foco na Construção de Autoridade e Reputação</h3>
+                        <p>Mais do que gerar cliques, nosso foco é construir sua autoridade digital e fortalecer sua reputação no mercado. Atraia clientes que valorizam sua especialização e experiência, e não apenas o preço.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?success,business,growth') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Nossos Cases de Sucesso: Resultados Reais na Advocacia Digital.</h1>
+                <p>Veja como a JurisPró Marketing transformou a presença online de advogados e escritórios, impulsionando sua autoridade e visibilidade.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Histórias de Crescimento e Destaque.</h2>
+                <p>Nesta seção, compartilhamos os resultados concretos alcançados por nossos clientes. Priorizamos a ética e a discrição, focando nos benefícios e no crescimento da autoridade jurídica no ambiente digital.</p>
+                <p style="font-style: italic; margin-top: 30px;">(Em breve, você encontrará aqui exemplos de como ajudamos advogados a:</p>
+                <ul class="content-list" style="margin-top: 20px; text-align: left; max-width: none;">
+                    <li>Aumentar a visibilidade orgânica em mecanismos de busca.</li>
+                    <li>Construir uma presença forte e ética nas redes sociais.</li>
+                    <li>Gerar mais reconhecimento e autoridade em suas áreas de atuação.</li>
+                    <li>Atrair clientes mais qualificados e alinhados com seus serviços.)</li>
+                </ul>
+                <p style="margin-top: 40px;">Fique atento(a) para as novidades e inspirações que traremos em breve!</p>
+            </div>
+        </section>
+
+        <section id="blog" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?blog,articles,knowledge') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Blog: Conhecimento e Estratégia para Sua Advocacia.</h1>
+                <p>Acompanhe as últimas tendências, dicas e análises sobre marketing jurídico ético e estratégico. Seu guia para o sucesso digital.</p>
+            </div>
+        </section>
+
+        <section style="background-color: var(--white);">
+            <div class="container">
+                <h2>Últimas Publicações:</h2>
+                <div class="grid-layout">
+                    <div class="grid-item" style="text-align: left;">
+                        <img src="https://via.placeholder.com/400x250?text=Post+1" alt="Imagem do Post 1" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                        <h3>Provimento 205/2021: O Guia Definitivo para Advogados no Digital.</h3>
+                        <p style="font-size: 0.9em; color: #777;">Publicado em: 15 de Julho, 2025</p>
+                        <p style="font-size: 1em;">Desvende as regras da OAB sobre publicidade jurídica e saiba o que é permitido e o que não é na internet.</p>
+                        <a href="#blog" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9em;">Leia Mais</a>
+                    </div>
+                    <div class="grid-item" style="text-align: left;">
+                        <img src="https://via.placeholder.com/400x250?text=Post+2" alt="Imagem do Post 2" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                        <h3>SEO para Advogados: 3 Passos para Ser Encontrado no Google em João Pessoa!</h3>
+                        <p style="font-size: 0.9em; color: #777;">Publicado em: 24 de Julho, 2025</p>
+                        <p style="font-size: 1em;">Descubra como otimizar sua presença online e atrair clientes locais que procuram por seus serviços jurídicos.</p>
+                        <a href="#blog" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9em;">Leia Mais</a>
+                    </div>
+                    <div class="grid-item" style="text-align: left;">
+                        <img src="https://via.placeholder.com/400x250?text=Post+3" alt="Imagem do Post 3" style="width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px;">
+                        <h3>Personal Branding para Advogados: Construa sua Marca Forte e Ética no Digital.</h3>
+                        <p style="font-size: 0.9em; color: #777;">Publicado em: 30 de Julho, 2025</p>
+                        <p style="font-size: 1em;">Aprenda a diferenciar-se no mercado e a solidificar sua reputação como um profissional de referência.</p>
+                        <a href="#blog" class="btn" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9em;">Leia Mais</a>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; font-style: italic; color: var(--gray-text);">*Este é o espaço para os artigos do seu calendário editorial. Mantenha seu blog atualizado!</p>
+            </div>
+        </section>
+
+        <section id="contato" class="hero-internal" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?contact,phone,email') no-repeat center center/cover;">
+            <div class="container">
+                <h1>Fale Conosco: Sua Advocacia Merece Destaque.</h1>
+                <p>Preencha o formulário ou use nossos canais diretos para agendar sua consultoria gratuita. Estamos prontos para te ajudar!</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section" style="background-color: var(--white);">
+            <div class="container">
+                <h2>Agende Sua Consultoria Gratuita e Estratégica!</h2>
+                <p>Preencha o formulário abaixo. **(Lembre-se: Este formulário não envia dados automaticamente. Você pode copiar as informações preenchidas para nos enviar por WhatsApp ou e-mail após preencher.)**</p>
+
+                <form id="contactForm" class="contact-form"> <div>
+                        <label for="nome">Nome Completo do Advogado(a)*</label>
+                        <input type="text" id="nome" name="nome_completo" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail Profissional*</label>
+                        <input type="email" id="email" name="email_profissional" required>
+                    </div>
+
+                    <div>
+                        <label for="whatsapp-form">Telefone / WhatsApp*</label>
+                        <input type="tel" id="whatsapp-form" name="telefone_whatsapp" required pattern="[0-9]{11}" placeholder="Ex: 83996999840">
+                        <small>Formato: DDNNNNNNNNN (apenas números, 11 dígitos)</small>
+                    </div>
+
+                    <div>
+                        <label for="escritorio">Nome do Escritório (se houver)</label>
+                        <input type="text" id="escritorio" name="nome_escritorio">
+                    </div>
+
+                    <div>
+                        <label for="area_atuacao">Principal(is) Área(s) de Atuação Jurídica*</label>
+                        <input type="text" id="area_atuacao" name="area_atuacao" required placeholder="Ex: Direito Civil, Penal, Empresarial">
+                    </div>
+
+                    <div>
+                        <label for="desafio">Qual seu maior desafio de marketing jurídico hoje?*</label>
+                        <textarea id="desafio" name="maior_desafio" rows="4" required placeholder="Ex: Atrair mais clientes, construir autoridade online, entender as regras da OAB..."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="orcamento">Qual o seu orçamento aproximado para investir em marketing por mês?</label>
+                        <select id="orcamento" name="orcamento_aproximado">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Ate_1000">Até R$ 1.000</option>
+                            <option value="1000_3000">R$ 1.000 - R$ 3.000</option>
+                            <option value="3000_5000">R$ 3.000 - R$ 5.000</option>
+                            <option value="Mais_5000">Acima de R$ 5.000</option>
+                            <option value="Nao_Definido">Ainda não definido</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="como_conheceu">Como você conheceu a JurisPró Marketing?</label>
+                        <select id="como_conheceu" name="como_conheceu">
+                            <option value="">Selecione uma opção</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Google">Google</option>
+                            <option value="Indicacao">Indicação</option>
+                            <option value="Evento">Evento/Webinar</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="melhor_horario">Melhor horário para entrarmos em contato?</label>
+                        <input type="text" id="melhor_horario" name="melhor_horario" placeholder="Ex: Manhã (9h-12h), Tarde (14h-17h)">
+                    </div>
+
+                    <div>
+                        <label for="mensagem_adicional">Mensagem Adicional (opcional)</label>
+                        <textarea id="mensagem_adicional" name="mensagem_adicional" rows="3" placeholder="Compartilhe qualquer informação adicional relevante."></textarea>
+                    </div>
+
+                    <p style="font-size: 0.9em; color: #777; margin-top: 15px;">* Campos obrigatórios</p>
+
+                    <button type="button" class="btn" onclick="openWhatsAppWithFormData()">
+                        Agendar Minha Consultoria Gratuita via WhatsApp
+                    </button>
+                </form>
+
+                <div class="contact-links">
+                    <p style="margin-top: 40px;">
+                        Se preferir, fale conosco diretamente pelo WhatsApp: <a href="https://wa.me/5583996999840?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20marketing%20jur%C3%ADdico%20da%20JurisPr%C3%B3%20Marketing." target="_blank" class="whatsapp-link">(83) 99699-9840</a>
+                    </p>
+                    <p>
+                        Ou envie um e-mail para: <a href="mailto:jurispromarketing@gmail.com" style="color: var(--primary-color);">jurispromarketing@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-container">
+                <a href="#home">
+                    <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753971112/20250731_1109_Logo_Transparente_Jur%C3%ADdica_remix_01k1gcwcnafcybjqme2fdknqzn_s0xnew.png" alt="JurisPró Marketing Logo" class="logo">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#etica-oab">Ética & OAB</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <p><strong>JurisPró Marketing</strong> | Estratégias Jurídicas Éticas para Advogados.</p>
+            <p>Telefone / WhatsApp: (83) 99699-9840 | E-mail: jurispromarketing@gmail.com</p>
+            <p>João Pessoa - Paraíba, Brasil.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/jurispromarketing" target="_blank" aria-label="Instagram da JurisPró Marketing">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px;">
+                <a href="#" style="color: rgba(255,255,255,0.9);">Política de Privacidade</a> | 
+                <a href="#" style="color: rgba(255,255,255,0.9);">Termos de Uso</a>
+            </p>
+            <p style="margin-top: 10px;">Copyright © 2025 JurisPró Marketing. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5583996999840?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20marketing%20jur%C3%ADdico%20da%20JurisPr%C3%B3%20Marketing." class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Lógica para o FAQ (Perguntas Frequentes)
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const faqItem = item.closest('.faq-item');
+                faqItem.classList.toggle('open');
+            });
+        });
+
+        // Lógica para o menu hamburguer (mobile)
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fecha o menu ao clicar em um link (mobile)
+        document.querySelectorAll('.nav-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 992 && navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Lógica do botão do formulário para abrir WhatsApp (NOVA LÓGICA PARA ARQUIVO ÚNICO)
+        function openWhatsAppWithFormData() {
+            const form = document.getElementById('contactForm');
+            const formData = new FormData(form);
+            let message = "Olá, JurisPró Marketing! Gostaria de agendar uma consultoria com base nos seguintes dados:\n\n";
+
+            for (let [key, value] of formData.entries()) {
+                let readableKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()); // Formata o nome do campo
+                if (key === 'telefone_whatsapp') { // Se for o número, já é o remetente
+                    message += `*${readableKey}:* ${value}\n`;
+                } else {
+                    message += `*${readableKey}:* ${value || 'Não informado'}\n`;
+                }
+            }
+
+            const whatsappUrl = `https://wa.me/5583996999840?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            form.reset(); // Limpa o formulário após abrir o WhatsApp
+            alert('Por favor, copie os dados preenchidos no formulário e cole na nossa conversa no WhatsApp para nos enviar!'); // Alerta para o usuário
+        }
+    </script>
+</body>
+</html>
