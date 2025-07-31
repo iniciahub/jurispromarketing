@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JurisPró Marketing | A Advociança no Digital com Ética e Resultados</title>
+    <title>JurisPró Marketing | A Advocacia no Digital com Ética e Resultados</title>
     <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -29,11 +29,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            font-size: 16px; /* Base para unidades rem */
+            height: 100%;
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
             scroll-behavior: smooth;
+            min-height: 100%; /* Garante que o corpo ocupe a altura mínima da viewport */
+            overflow-x: hidden; /* Previne rolagem horizontal no corpo também */
         }
 
         /* Estilos Gerais */
@@ -96,16 +104,17 @@
             flex-shrink: 0;
         }
         .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--secondary-color);
-            box-shadow: 0 0 0 rgba(224, 180, 98, 0);
-            transition: box-shadow 0.5s ease-in-out;
+            width: 80px; /* Ajuste o tamanho para a sua foto */
+            height: 80px; /* Mantém a proporção */
+            border-radius: 50%; /* Torna a foto redonda */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+            border: 2px solid var(--secondary-color); /* Borda para destaque */
+            box-shadow: 0 0 0 rgba(224, 180, 98, 0); /* Sombra inicial transparente */
+            transition: box-shadow 0.5s ease-in-out; /* Transição suave para o efeito de pulso */
         }
+        /* Efeito Criativo na Logo (Pulso de Sombra) */
         .logo:hover {
-            box-shadow: 0 0 15px 5px rgba(224, 180, 98, 0.7);
+            box-shadow: 0 0 15px 5px rgba(224, 180, 98, 0.7); /* Sombra amarelada pulsante */
         }
 
         .nav-menu {
@@ -153,6 +162,7 @@
             border-radius: 2px;
             transition: all 0.3s ease-in-out;
         }
+        /* Efeito para o X */
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
@@ -577,7 +587,7 @@
                 width: 100%;
                 background-color: var(--primary-color);
                 position: absolute;
-                top: 70px; /* Ajuste conforme a altura do seu header */
+                top: 70px;
                 left: 0;
                 padding-bottom: 20px;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -593,16 +603,16 @@
                 display: flex;
             }
             .hero-home h1, .hero-internal h1 {
-                font-size: 2em; /* Reduzido de 2.5em */
+                font-size: 2.2rem; /* Ajustado para melhor leitura */
             }
             .hero-home h2, .hero-internal p {
-                font-size: 1.1em; /* Reduzido de 1.2em */
+                font-size: 1rem; /* Ajustado para melhor leitura */
             }
             section {
-                padding: 50px 15px; /* Reduzido de 60px */
+                padding: 40px 15px; /* Reduzido o padding */
             }
             section h2 {
-                font-size: 1.8em; /* Reduzido de 2em */
+                font-size: 1.6rem; /* Ajustado */
             }
             .grid-layout, .process-steps {
                 grid-template-columns: 1fr;
@@ -611,11 +621,11 @@
                 flex: none;
             }
             .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                right: 20px;
-                font-size: 25px;
+                bottom: 15px; /* Mais para cima */
+                right: 15px; /* Mais para dentro */
+                width: 55px; /* Ligeiramente menor */
+                height: 55px;
+                font-size: 28px; /* Ícone menor */
             }
             footer ul {
                 flex-direction: column;
@@ -626,31 +636,31 @@
         /* Responsividade para Telas MUITO pequenas (celulares menores) */
         @media (max-width: 576px) {
             .navbar {
-                padding: 0 10px; /* Reduz padding do header */
+                padding: 0 10px;
             }
             .logo {
-                width: 70px; /* Logo um pouco menor */
-                height: 70px;
+                width: 65px; /* Logo um pouco menor */
+                height: 65px;
             }
             .hero-home h1, .hero-internal h1 {
-                font-size: 1.8em; /* Ajuste para telas muito pequenas */
+                font-size: 1.8rem;
                 line-height: 1.3;
             }
             .hero-home h2, .hero-internal p {
-                font-size: 1em; /* Ajuste para telas muito pequenas */
+                font-size: 0.95rem;
             }
             .hero-home .btn {
-                padding: 12px 25px; /* Botão menor */
+                padding: 12px 25px;
                 font-size: 1em;
             }
             section h2 {
-                font-size: 1.5em; /* Ajuste para telas muito pequenas */
+                font-size: 1.4rem;
             }
             section p {
-                font-size: 0.95em;
+                font-size: 0.9em;
             }
             .grid-item {
-                padding: 20px; /* Padding menor nos cards */
+                padding: 20px;
             }
             .grid-item h3 {
                 font-size: 1.2em;
@@ -669,22 +679,40 @@
                 padding: 12px 20px;
                 font-size: 1em;
             }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 10px; /* Ainda mais para cima */
+                right: 10px; /* Ainda mais para dentro */
+            }
         }
 
-        /* Otimização para larguras MUITO pequenas, como 320px */
+        /* Otimização para larguras EXTREMAMENTE pequenas, como 320px */
         @media (max-width: 375px) {
             .hero-home h1, .hero-internal h1 {
-                font-size: 1.6em;
+                font-size: 1.5rem;
             }
             .hero-home h2, .hero-internal p {
-                font-size: 0.9em;
+                font-size: 0.85rem;
             }
             section h2 {
-                font-size: 1.3em;
+                font-size: 1.2rem;
             }
             .logo {
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
+            }
+            .hamburger { /* Ajusta a margem do hamburger se ele estiver muito perto da logo */
+                margin-left: auto;
+                margin-right: 5px;
+            }
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+                bottom: 8px; /* Mais para cima */
+                right: 8px; /* Mais para dentro */
             }
         }
     </style>
@@ -780,25 +808,13 @@
         <section class="fade-in-section" style="background-color: var(--white);">
             <div class="container">
                 <h2>Mentes Estratégicas por Trás do Seu Sucesso.</h2>
-                <p>Conheça os profissionais que compõem a JurisPró Marketing. Uma equipe multidisciplinar de especialistas em marketing digital, comunicação e, acima de tudo, apaixonados pelo universo jurídico e pela sua ética.</p>
-                <div class="grid-layout" style="margin-top: 40px;">
+                <p>Conheça o profissional que lidera a JurisPró Marketing. Um especialista em marketing digital e, acima de tudo, apaixonado pelo universo jurídico e pela sua ética.</p>
+                <div class="grid-layout" style="margin-top: 40px; justify-content: center; /* Centraliza o item */">
                     <div class="grid-item">
-                        <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753973637/photo_2025-07-31_11-05-57_tdaqpi.jpg" alt="Foto de Ademir Rodrigues" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753975584/photo_2025-07-31_12-26-06_snzu95.jpg" alt="Foto de Ademir Rodrigues" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
                         <h3>Ademir Rodrigues</h3>
                         <p>CEO & Fundador</p>
                         <p style="font-size: 0.9em;">Com vasta experiência em marketing digital e uma paixão pela ética jurídica, Ademir lidera a equipe com foco em inovação e resultados para a advocacia.</p>
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://via.placeholder.com/150x150?text=Especialista" alt="Foto do Especialista em Conteúdo" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
-                        <h3>Especialista em Conteúdo</h3>
-                        <p>Content Strategist</p>
-                        <p style="font-size: 0.9em;">Responsável por criar narrativas jurídicas envolventes e informativas, garantindo que cada palavra transmita autoridade e esteja em conformidade com a OAB.</p>
-                    </div>
-                    <div class="grid-item">
-                        <img src="https://via.placeholder.com/150x150?text=SEO" alt="Foto do Especialista em SEO" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
-                        <h3>Especialista em SEO</h3>
-                        <p>SEO Lead</p>
-                        <p style="font-size: 0.9em;">Arquiteto de visibilidade online, focado em estratégias de SEO para que seu escritório seja encontrado e posicionado no topo das buscas pelos clientes certos.</p>
                     </div>
                 </div>
             </div>
@@ -1141,4 +1157,3 @@
     </script>
 </body>
 </html>
-~~~
