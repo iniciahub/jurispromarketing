@@ -167,7 +167,7 @@
 
         /* Hero Section (Home) */
         .hero-home {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover; /* Imagem de fundo */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
             padding: 120px 20px;
@@ -175,9 +175,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 60vh; /* Altura mínima para mobile */
-            opacity: 0; /* Inicialmente invisível para animação */
-            transform: translateY(20px); /* Leve deslocamento para animação */
+            min-height: 60vh;
+            opacity: 0;
+            transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
         .hero-home.is-visible {
@@ -201,17 +201,17 @@
 
         /* Hero Section (Páginas Internas - adaptado para seções) */
         .hero-internal {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?law,firm') no-repeat center center/cover; /* Imagem de fundo */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?law,firm') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 100px 20px 60px; /* Menos padding inferior para seções internas */
-            min-height: 30vh; /* Altura menor */
+            padding: 100px 20px 60px;
+            min-height: 30vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            opacity: 0; /* Inicialmente invisível para animação */
-            transform: translateY(20px); /* Leve deslocamento para animação */
+            opacity: 0;
+            transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
         .hero-internal.is-visible {
@@ -235,15 +235,15 @@
         section {
             padding: 80px 20px;
             text-align: center;
-            opacity: 0; /* Inicialmente invisível para animação */
-            transform: translateY(20px); /* Leve deslocamento para animação */
+            opacity: 0;
+            transform: translateY(20px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-        section:nth-of-type(odd) { /* Para alternar cor de fundo */
+        section:nth-of-type(odd) {
             background-color: var(--light-bg);
         }
         section h2 {
@@ -448,9 +448,7 @@
             font-weight: bold;
             color: var(--text-color);
         }
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form input[type="tel"],
+        .contact-form input,
         .contact-form select,
         .contact-form textarea {
             width: 100%;
@@ -468,7 +466,7 @@
         .contact-form textarea {
             resize: vertical;
         }
-        .contact-form button[type="button"] { /* Agora é tipo button para a função JS local */
+        .contact-form button {
             background-color: var(--primary-color);
             color: var(--white);
             padding: 15px 30px;
@@ -482,7 +480,7 @@
             width: 100%;
             margin-top: 30px;
         }
-        .contact-form button[type="button"]:hover {
+        .contact-form button:hover {
             background-color: var(--secondary-color);
         }
 
@@ -542,7 +540,7 @@
             color: var(--secondary-color);
         }
 
-        /* Botão Flutuante WhatsApp */
+        /* Botão Flutuante WhatsApp com Animação de Piscar */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -560,45 +558,53 @@
             align-items: center;
             justify-content: center;
             transition: background-color 0.3s ease;
+            animation: blink 1.5s infinite alternate; /* Adiciona a animação */
         }
         .whatsapp-float:hover {
             background-color: var(--whatsapp-dark);
+            animation-play-state: paused; /* Pausa a animação ao passar o mouse */
         }
 
-        /* Responsividade */
+        /* Animação de Piscar */
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.7; }
+        }
+
+        /* Responsividade para Telas Menores que 992px */
         @media (max-width: 992px) {
             .nav-menu {
-                display: none; /* Esconde o menu em telas menores */
+                display: none;
                 flex-direction: column;
                 width: 100%;
                 background-color: var(--primary-color);
                 position: absolute;
-                top: 70px; /* Ajuste conforme a altura do seu header */
+                top: 70px;
                 left: 0;
                 padding-bottom: 20px;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
             .nav-menu.active {
-                display: flex; /* Mostra o menu quando ativo */
+                display: flex;
             }
             .nav-menu li {
                 margin: 10px 0;
                 text-align: center;
             }
             .hamburger {
-                display: flex; /* Mostra o hamburguer */
+                display: flex;
             }
             .hero-home h1, .hero-internal h1 {
-                font-size: 2.5em;
+                font-size: 2em; /* Reduzido de 2.5em */
             }
             .hero-home h2, .hero-internal p {
-                font-size: 1.2em;
+                font-size: 1.1em; /* Reduzido de 1.2em */
             }
             section {
-                padding: 60px 15px;
+                padding: 50px 15px; /* Reduzido de 60px */
             }
             section h2 {
-                font-size: 2em;
+                font-size: 1.8em; /* Reduzido de 2em */
             }
             .grid-layout, .process-steps {
                 grid-template-columns: 1fr;
@@ -616,6 +622,54 @@
             footer ul {
                 flex-direction: column;
                 gap: 10px;
+            }
+        }
+
+        /* Responsividade para Telas MUITO pequenas (celulares menores) */
+        @media (max-width: 576px) {
+            .navbar {
+                padding: 0 10px; /* Reduz padding do header */
+            }
+            .logo {
+                width: 70px; /* Logo um pouco menor */
+                height: 70px;
+            }
+            .hero-home h1, .hero-internal h1 {
+                font-size: 1.8em; /* Ajuste para telas muito pequenas */
+                line-height: 1.3;
+            }
+            .hero-home h2, .hero-internal p {
+                font-size: 1em; /* Ajuste para telas muito pequenas */
+            }
+            .hero-home .btn {
+                padding: 12px 25px; /* Botão menor */
+                font-size: 1em;
+            }
+            section h2 {
+                font-size: 1.5em; /* Ajuste para telas muito pequenas */
+            }
+            section p {
+                font-size: 0.95em;
+            }
+            .grid-item {
+                padding: 20px; /* Padding menor nos cards */
+            }
+            .grid-item h3 {
+                font-size: 1.2em;
+            }
+            .problem-section ul li {
+                font-size: 1em;
+                padding: 15px;
+            }
+            .faq-question {
+                font-size: 1.1em;
+            }
+            .contact-form {
+                padding: 25px;
+            }
+            .contact-form button {
+                padding: 12px 20px;
+                font-size: 1em;
             }
         }
     </style>
@@ -872,7 +926,7 @@
             </div>
         </section>
 
-        <section class="contact-form-section fade-in-section" style="background-color: var(--white);">
+        <section class="contact-form-section fade-in-section" style="background-color: var(--light-bg);">
             <div class="container">
                 <h2>Agende Sua Consultoria Gratuita e Estratégica!</h2>
                 <p>Preencha o formulário abaixo. **(Lembre-se: Este formulário não envia dados automaticamente. Você pode copiar as informações preenchidas para nos enviar por WhatsApp ou e-mail após preencher.)**</p>
@@ -1024,17 +1078,15 @@
             });
         });
 
-        // Lógica do botão do formulário para abrir WhatsApp (AGORA JÁ PREENCHE AUTOMATICAMENTE NO WHATSAPP)
+        // Lógica do botão do formulário para abrir WhatsApp (agora já pré-preenche a mensagem)
         function openWhatsAppWithFormData() {
             const form = document.getElementById('contactForm');
             const formData = new FormData(form);
             let message = "Olá, JurisPró Marketing! Gostaria de agendar uma consultoria com base nos seguintes dados:\n\n";
 
-            // Formata os dados para a mensagem do WhatsApp
             for (let [key, value] of formData.entries()) {
-                let readableKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()); // Ex: nome_completo -> Nome Completo
+                let readableKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
                 if (key === 'telefone_whatsapp') {
-                    // Adiciona o telefone, mas de forma que não se confunda com o número de contato.
                     message += `*${readableKey}:* ${value}\n`;
                 } else {
                     message += `*${readableKey}:* ${value || 'Não informado'}\n`;
@@ -1043,8 +1095,7 @@
 
             const whatsappUrl = `https://wa.me/5583996999840?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
-            form.reset(); // Limpa o formulário após abrir o WhatsApp
-            // Não precisa de alerta, pois a mensagem já vai pré-preenchida no WhatsApp
+            form.reset();
         }
 
         // Animação on scroll (Fade-in para seções)
@@ -1073,3 +1124,27 @@
     </script>
 </body>
 </html>
+~~~
+
+---
+
+**Explicação das Alterações e Otimizações:**
+
+1.  **Novos Breakpoints:**
+    * Adicionado um novo breakpoint `@media (max-width: 576px)` para celulares muito pequenos.
+    * Dentro dessa nova media query, os tamanhos de fonte (`font-size`) dos títulos `h1` e `h2` na seção hero e em outras seções foram **reduzidos ainda mais**, e o `padding` de `section` e `.navbar` foi ajustado para telas ultra-compactas. Isso evita que o texto seja cortado ou cause rolagem horizontal.
+    * O tamanho da logo (`.logo`) também foi ligeiramente ajustado para 70px em telas menores que 576px.
+
+2.  **Botão Flutuante do WhatsApp Piscando:**
+    * A animação `@keyframes blink` foi criada para variar a opacidade do botão entre 1 (totalmente visível) e 0.7 (levemente transparente).
+    * `animation: blink 1.5s infinite alternate;` foi adicionado à classe `.whatsapp-float` para aplicar essa animação, que dura 1.5 segundos, se repete infinitamente e alterna a direção a cada ciclo (pisca suavemente).
+    * `animation-play-state: paused;` foi adicionado ao `:hover` do botão para que a animação pare quando o usuário passar o mouse por cima, melhorando a usabilidade.
+
+Com essas mudanças, seu site deve se adaptar muito melhor a uma gama mais ampla de smartphones, e o botão do WhatsApp ficará mais evidente para o contato.
+
+**Lembre-se de:**
+
+1.  Salvar este novo código no seu arquivo `public/index.html`.
+2.  Fazer o deploy novamente no Vercel (navegue até a pasta raiz do seu projeto no terminal e execute `vercel --prod`).
+
+Testa novamente no seu smartphone e me diga o que achou!
