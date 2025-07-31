@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JurisPró Marketing | Advocacia Digital com Ética e Resultados</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png">
-    <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
+    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
@@ -121,17 +120,25 @@
             flex-shrink: 0;
         }
         .logo {
-            width: 70px;
+            width: 70px; /* Tamanho da logo */
             height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--secondary-accent);
+            border-radius: 50%; /* Torna a foto redonda */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+            border: 3px solid var(--secondary-accent); /* Borda mais grossa */
             box-shadow: 0 0 0 0 rgba(224, 180, 98, 0);
             transition: all 0.5s ease-in-out;
+            animation: pulse-logo 1.5s infinite alternate; /* Adicionada animação */
         }
         .logo:hover {
             box-shadow: 0 0 1.125rem 0.375rem rgba(224, 180, 98, 0.8); /* 18px 6px */
             transform: scale(1.05);
+            animation-play-state: paused; /* Pausa a animação ao passar o mouse */
+        }
+
+        /* Nova animação para o efeito luminoso da logo */
+        @keyframes pulse-logo {
+            0% { box-shadow: 0 0 5px 0 var(--secondary-accent); }
+            100% { box-shadow: 0 0 15px 5px rgba(224, 180, 98, 0.6); }
         }
 
         .nav-menu {
@@ -234,7 +241,7 @@
 
         /* Hero Section (Home) */
         .hero-home {
-            background: linear-gradient(to bottom, rgba(26,42,78,0.9), rgba(26,42,78,0.7)), url('https://source.unsplash.com/random/1920x800?lawyer,digital,success,office') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(26,42,78,0.9), rgba(26,42,78,0.7)), url('https://source.unsplash.com/random/1920x800?lawyer,digital,success') no-repeat center center/cover;
             color: var(--text-light);
             padding: 11.25rem 1.25rem; /* 180px 20px */
             min-height: 70vh;
@@ -247,19 +254,21 @@
         .hero-home h1 {
             font-size: 3.8rem;
             margin-bottom: 1.5625rem; /* 25px */
-            color: var(--text-light);
+            color: var(--text-light); /* Títulos em branco no Hero Home */
+            font-weight: 700;
             max-width: 62.5rem; /* 1000px */
         }
         .hero-home h2 {
             font-size: 1.6rem;
             margin-bottom: 3.125rem; /* 50px */
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.9); /* Subtítulo em branco no Hero Home */
             max-width: 56.25rem; /* 900px */
+            line-height: 1.5;
         }
 
         /* Hero Section (Páginas Internas) */
         .hero-internal {
-            background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?law,firm,justice,books') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?law,firm,justice') no-repeat center center/cover;
             color: var(--text-light);
             padding: 7.5rem 1.25rem 5rem; /* 120px 20px 80px */
             min-height: 35vh;
@@ -272,11 +281,11 @@
         .hero-internal h1 {
             font-size: 3.2rem;
             margin-bottom: 1.25rem; /* 20px */
-            color: var(--text-light);
+            color: var(--text-light); /* Títulos em branco no Hero Interno */
         }
         .hero-internal p {
             font-size: 1.3rem;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.9); /* Texto em branco no Hero Interno */
             max-width: 56.25rem; /* 900px */
         }
 
@@ -692,7 +701,7 @@
             }
 
             .nav-menu {
-                display: none;
+                display: none; /* Oculta o menu padrão */
                 position: absolute;
                 top: 5.3125rem; /* 85px - Ajustado para a nova altura do header */
                 left: 0;
@@ -705,7 +714,7 @@
                 z-index: 10;
             }
             .nav-menu.active {
-                display: flex;
+                display: flex; /* Mostra o menu ao clicar no hambúrguer */
             }
             .nav-menu li {
                 margin: 0.9375rem 0; /* 15px */
@@ -719,7 +728,7 @@
                 display: none; /* Remove a linha inferior no menu mobile */
             }
             .hamburger {
-                display: flex;
+                display: flex; /* Mostra o hambúrguer */
             }
             .hero-home {
                 padding: 7.5rem 1rem 5rem; /* 120px 16px 80px */
@@ -779,7 +788,6 @@
                 font-size: 1.875rem; /* 30px */
             }
             footer ul {
-                flex-direction: column;
                 gap: 0.625rem; /* 10px */
             }
             .contact-form {
@@ -794,19 +802,22 @@
             h3 { font-size: 1.2rem; }
             p { font-size: 0.9rem; }
 
+            .navbar {
+                padding: 0 0.9375rem; /* 15px */
+            }
             .logo {
                 width: 3.4375rem; /* 55px */
                 height: 3.4375rem;
             }
             .hero-home {
-                padding: 5rem 1rem 3.125rem; /* 80px 16px 50px */
+                padding: 5rem 0.9375rem 3.125rem; /* 80px 15px 50px */
             }
             .hero-home h1 {
                 font-size: 1.6rem;
                 line-height: 1.3;
             }
             .hero-home h2 {
-                font-size: 0.95rem;
+                font-size: 1rem; /* 16px */
                 margin-bottom: 1.5625rem; /* 25px */
             }
             .hero-home .btn {
@@ -814,13 +825,13 @@
                 font-size: 0.9rem;
             }
             .hero-internal {
-                padding: 4.375rem 1rem 2.5rem; /* 70px 16px 40px */
+                padding: 4.375rem 0.9375rem 2.5rem; /* 70px 15px 40px */
             }
             .hero-internal h1 {
                 font-size: 1.8rem;
             }
             section {
-                padding: 2.5rem 1rem; /* 40px 16px */
+                padding: 2.5rem 0.9375rem; /* 40px 15px */
             }
             section h2 {
                 font-size: 1.4rem;
@@ -838,14 +849,14 @@
                 font-size: 1.1rem;
             }
             .grid-item i {
-                font-size: 2.5rem;
+                font-size: 2.5rem; /* 40px */
                 margin-bottom: 0.9375rem; /* 15px */
             }
             .step-item .step-number {
-                font-size: 3rem; /* 48px */
+                font-size: 3rem;
             }
             .step-item h3 {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
             .step-item p {
                 font-size: 0.9rem;
@@ -886,9 +897,9 @@
 
         /* Otimização para larguras EXTREMAMENTE pequenas, como 320px */
         @media (max-width: 375px) {
-            h1 { font-size: 1.4rem; }
-            h2 { font-size: 1.2rem; }
-            .hero-home h1 { font-size: 1.25rem; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.3rem; }
+            .hero-home h1 { font-size: 1.4rem; }
             .hero-home h2 { font-size: 0.85rem; }
             .logo {
                 width: 2.8rem; /* 45px */
