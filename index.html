@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JurisPró Marketing | A Advocacia no Digital com Ética e Resultados</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia. Construa sua autoridade digital e atraia clientes qualificados.">
+    <title>JurisPró Marketing | A Advociança no Digital com Ética e Resultados</title>
+    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
@@ -33,7 +33,7 @@
             font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
-            scroll-behavior: smooth; /* Rolagem suave para os âncoras */
+            scroll-behavior: smooth;
         }
 
         /* Estilos Gerais */
@@ -96,17 +96,16 @@
             flex-shrink: 0;
         }
         .logo {
-            width: 80px; /* Ajuste o tamanho para a sua foto */
-            height: 80px; /* Mantém a proporção */
-            border-radius: 50%; /* Torna a foto redonda */
-            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-            border: 2px solid var(--secondary-color); /* Borda para destaque */
-            box-shadow: 0 0 0 rgba(224, 180, 98, 0); /* Sombra inicial transparente */
-            transition: box-shadow 0.5s ease-in-out; /* Transição suave para o efeito de pulso */
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--secondary-color);
+            box-shadow: 0 0 0 rgba(224, 180, 98, 0);
+            transition: box-shadow 0.5s ease-in-out;
         }
-        /* Efeito Criativo na Logo (Pulso de Sombra) */
         .logo:hover {
-            box-shadow: 0 0 15px 5px rgba(224, 180, 98, 0.7); /* Sombra amarelada pulsante */
+            box-shadow: 0 0 15px 5px rgba(224, 180, 98, 0.7);
         }
 
         .nav-menu {
@@ -154,7 +153,6 @@
             border-radius: 2px;
             transition: all 0.3s ease-in-out;
         }
-        /* Efeito para o X */
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
@@ -579,7 +577,7 @@
                 width: 100%;
                 background-color: var(--primary-color);
                 position: absolute;
-                top: 70px;
+                top: 70px; /* Ajuste conforme a altura do seu header */
                 left: 0;
                 padding-bottom: 20px;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -672,6 +670,23 @@
                 font-size: 1em;
             }
         }
+
+        /* Otimização para larguras MUITO pequenas, como 320px */
+        @media (max-width: 375px) {
+            .hero-home h1, .hero-internal h1 {
+                font-size: 1.6em;
+            }
+            .hero-home h2, .hero-internal p {
+                font-size: 0.9em;
+            }
+            section h2 {
+                font-size: 1.3em;
+            }
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -689,7 +704,8 @@
                     <li><a href="#sobre-nos">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#etica-oab">Ética & OAB</a></li>
-                    <li><a href="#contato">Contato</a></li> </ul>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
             </nav>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -703,7 +719,7 @@
         <section id="home" class="hero-home" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover;">
             <div class="container">
                 <h1>JurisPró Marketing: A Excelência Jurídica no Digital, com Ética e Resultados.</h1>
-                <h2>Transformamos a presença online de advogados e escritórios em João Pessoa e em todo o Brasil, impulsionando sua autoridade e atraindo clientes qualificados, sempre em conformidade com a OAB.</h2>
+                <h2>Transformamos a presença online de advogados e escritórios em todo o Brasil, impulsionando sua autoridade e atraindo clientes qualificados, sempre em conformidade com a OAB.</h2>
                 <a href="#contato" class="btn">Agende Sua Consultoria Gratuita</a>
             </div>
         </section>
@@ -711,7 +727,7 @@
         <section class="problem-section fade-in-section">
             <div class="container">
                 <h2>Seus Desafios de Marketing na Advocacia Encontram Solução Aqui.</h2>
-                <p>No cenário jurídico atual, apenas a excelência técnica já não basta para alcançar o sucesso. Muitos advogados e escritórios em João Pessoa enfrentam:</p>
+                <p>No cenário jurídico atual, apenas a excelência técnica já não basta para alcançar o sucesso. Muitos advogados e escritórios em todo o Brasil enfrentam:</p>
                 <ul>
                     <li>⏳ Falta de tempo para se dedicar à presença online.</li>
                     <li>🚨 Medo de violar as normas da OAB sobre publicidade.</li>
@@ -731,7 +747,7 @@
         <section class="fade-in-section" style="background-color: var(--white);">
             <div class="container">
                 <h2>Uma Jornada Pelo Sucesso Ético na Advocacia Digital.</h2>
-                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em João Pessoa (e em todo o Brasil) se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com **experiência consolidada em marketing e uma visão aprofundada do universo jurídico**, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
+                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em todo o Brasil se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com **experiência consolidada em marketing e uma visão aprofundada do universo jurídico**, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
                 <p>Desde então, nos dedicamos a construir pontes entre a advocacia e o mundo digital, sempre priorizando a conformidade com as normas da OAB e a entrega de resultados que realmente fazem a diferença para a carreira de nossos clientes.</p>
             </div>
         </section>
@@ -791,7 +807,7 @@
         <section id="servicos" class="hero-internal fade-in-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?digital,marketing,strategy') no-repeat center center/cover;">
             <div class="container">
                 <h1>Nossas Soluções: Impulsionando Sua Advocacia com Estratégia e Ética.</h1>
-                <p>Oferecemos um portfólio completo de soluções digitais pensadas exclusivamente para as necessidades de advogados e escritórios de advocacia.</p>
+                <p>Oferecemos um portfólio completo de soluções digitais pensadas exclusivamente para as necessidades de advogados e escritórios de advocacia em todo o Brasil.</p>
             </div>
         </section>
 
@@ -809,7 +825,7 @@
                     </div>
                     <div class="grid-item">
                         <h3>SEO para Advogados (Otimização para Mecanismos de Busca)</h3>
-                        <p>Otimizamos seu site e conteúdo para que apareçam nas primeiras posições do Google, conectando você a quem busca por serviços jurídicos em João Pessoa e região.</p>
+                        <p>Otimizamos seu site e conteúdo para que apareçam nas primeiras posições do Google, conectando você a quem busca por serviços jurídicos em todo o Brasil.</p>
                     </div>
                     <div class="grid-item">
                         <h3>Criação e Otimização de Sites e Blogs Jurídicos</h3>
@@ -882,7 +898,7 @@
                 <h2>Advogados Satisfeitos, Advocacias em Destaque.</h2>
                 <div class="testimonial-item">
                     <p>"A JurisPró Marketing realmente transformou nossa presença online. Além de entenderem as regras da OAB, são extremamente estratégicos e profissionais. Notamos um aumento significativo no nosso reconhecimento. Recomendo!"</p>
-                    <span class="testimonial-author">— Dra. [Nome do Advogado/Escritório], [Área de Atuação], João Pessoa/PB.</span>
+                    <span class="testimonial-author">— Dra. [Nome do Advogado/Escritório], [Área de Atuação], Brasil.</span>
                 </div>
                 </div>
         </section>
@@ -906,7 +922,7 @@
                     <div class="faq-item">
                         <div class="faq-question">Vocês atendem advogados de qual área do direito?</div>
                         <div class="faq-answer">
-                            <p>Atendemos todas as áreas do direito. Nossas estratégias são personalizáveis para as necessidades e objetivos específicos de cada profissional ou escritório.</p>
+                            <p>Atendemos todas as áreas do direito em todo o Brasil. Nossas estratégias são personalizáveis para as necessidades e objetivos específicos de cada profissional ou escritório.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -931,7 +947,8 @@
                 <h2>Agende Sua Consultoria Gratuita e Estratégica!</h2>
                 <p>Preencha o formulário abaixo. **(Lembre-se: Este formulário não envia dados automaticamente. Você pode copiar as informações preenchidas para nos enviar por WhatsApp ou e-mail após preencher.)**</p>
 
-                <form id="contactForm" class="contact-form"> <div>
+                <form id="contactForm" class="contact-form">
+                    <div>
                         <label for="nome">Nome Completo do Advogado(a)*</label>
                         <input type="text" id="nome" name="nome_completo" required>
                     </div>
@@ -1032,7 +1049,7 @@
             </ul>
             <p><strong>JurisPró Marketing</strong> | Estratégias Jurídicas Éticas para Advogados.</p>
             <p>Telefone / WhatsApp: (83) 99699-9840 | E-mail: jurispromarketing@gmail.com</p>
-            <p>João Pessoa - Paraíba, Brasil.</p>
+            <p>Brasil.</p>
             <div class="social-icons">
                 <a href="https://www.instagram.com/jurispromarketing" target="_blank" aria-label="Instagram da JurisPró Marketing">
                     <i class="fab fa-instagram"></i>
@@ -1125,26 +1142,3 @@
 </body>
 </html>
 ~~~
-
----
-
-**Explicação das Alterações e Otimizações:**
-
-1.  **Novos Breakpoints:**
-    * Adicionado um novo breakpoint `@media (max-width: 576px)` para celulares muito pequenos.
-    * Dentro dessa nova media query, os tamanhos de fonte (`font-size`) dos títulos `h1` e `h2` na seção hero e em outras seções foram **reduzidos ainda mais**, e o `padding` de `section` e `.navbar` foi ajustado para telas ultra-compactas. Isso evita que o texto seja cortado ou cause rolagem horizontal.
-    * O tamanho da logo (`.logo`) também foi ligeiramente ajustado para 70px em telas menores que 576px.
-
-2.  **Botão Flutuante do WhatsApp Piscando:**
-    * A animação `@keyframes blink` foi criada para variar a opacidade do botão entre 1 (totalmente visível) e 0.7 (levemente transparente).
-    * `animation: blink 1.5s infinite alternate;` foi adicionado à classe `.whatsapp-float` para aplicar essa animação, que dura 1.5 segundos, se repete infinitamente e alterna a direção a cada ciclo (pisca suavemente).
-    * `animation-play-state: paused;` foi adicionado ao `:hover` do botão para que a animação pare quando o usuário passar o mouse por cima, melhorando a usabilidade.
-
-Com essas mudanças, seu site deve se adaptar muito melhor a uma gama mais ampla de smartphones, e o botão do WhatsApp ficará mais evidente para o contato.
-
-**Lembre-se de:**
-
-1.  Salvar este novo código no seu arquivo `public/index.html`.
-2.  Fazer o deploy novamente no Vercel (navegue até a pasta raiz do seu projeto no terminal e execute `vercel --prod`).
-
-Testa novamente no seu smartphone e me diga o que achou!
