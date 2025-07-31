@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JurisPró Marketing | A Advocacia no Digital com Ética e Resultados</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
+    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png">
+    <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
@@ -14,10 +15,12 @@
         :root {
             --primary-color: #1a2a4e; /* Azul Escuro (quase preto) */
             --secondary-color: #e0b462; /* Dourado/Bronze */
+            --accent-color: #4CAF50; /* Verde para destaque/sucesso */
             --text-color: #333;
-            --light-bg: #f9f9f9;
+            --light-bg: #f5f5f5; /* Fundo mais claro */
             --white: #ffffff;
             --gray-text: #555;
+            --border-color: #e0e0e0; /* Borda suave */
             --whatsapp-green: #25D366;
             --whatsapp-dark: #128C7E;
         }
@@ -30,25 +33,26 @@
         }
 
         html {
-            font-size: 16px; /* Base para unidades rem */
+            font-size: 16px;
             height: 100%;
-            overflow-x: hidden; /* Previne rolagem horizontal */
+            scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: var(--text-color);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-            min-height: 100%; /* Garante que o corpo ocupe a altura mínima da viewport */
-            overflow-x: hidden; /* Previne rolagem horizontal no corpo também */
+            line-height: 1.7;
+            min-height: 100%;
+            overflow-x: hidden;
+            background-color: var(--white);
         }
 
         /* Estilos Gerais */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 25px; /* Aumentado um pouco o padding lateral */
         }
 
         a {
@@ -64,33 +68,58 @@
             font-family: 'Playfair Display', serif;
             color: var(--primary-color);
             margin-top: 0;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.8em; /* Ajustado para mais espaçamento */
             line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h1 { font-size: 3.5em; } /* Grandes títulos */
+        h2 { font-size: 2.8em; } /* Títulos de seção */
+        h3 { font-size: 1.8em; } /* Títulos de item/card */
+
+        p {
+            margin-bottom: 1em;
+            font-size: 1.05em; /* Levemente maior */
+            color: var(--gray-text);
         }
 
         .btn {
             display: inline-block;
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 15px 30px;
-            border-radius: 5px;
+            padding: 16px 32px; /* Maior padding */
+            border-radius: 8px; /* Mais arredondado */
             text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             border: none;
             cursor: pointer;
             text-align: center;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .btn:hover {
             background-color: var(--secondary-color);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        .btn.btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: none;
+        }
+        .btn.btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         /* Header e Navegação */
         header {
             background-color: var(--primary-color);
             padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.15);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -104,17 +133,17 @@
             flex-shrink: 0;
         }
         .logo {
-            width: 80px; /* Ajuste o tamanho para a sua foto */
-            height: 80px; /* Mantém a proporção */
-            border-radius: 50%; /* Torna a foto redonda */
-            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-            border: 2px solid var(--secondary-color); /* Borda para destaque */
-            box-shadow: 0 0 0 rgba(224, 180, 98, 0); /* Sombra inicial transparente */
-            transition: box-shadow 0.5s ease-in-out; /* Transição suave para o efeito de pulso */
+            width: 70px; /* Tamanho da logo */
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color); /* Borda mais grossa */
+            box-shadow: 0 0 0 0 rgba(224, 180, 98, 0);
+            transition: all 0.5s ease-in-out;
         }
-        /* Efeito Criativo na Logo (Pulso de Sombra) */
         .logo:hover {
-            box-shadow: 0 0 15px 5px rgba(224, 180, 98, 0.7); /* Sombra amarelada pulsante */
+            box-shadow: 0 0 18px 6px rgba(224, 180, 98, 0.8); /* Sombra mais intensa */
+            transform: scale(1.05); /* Leve aumento ao hover */
         }
 
         .nav-menu {
@@ -124,26 +153,28 @@
             padding: 0;
         }
         .nav-menu li {
-            margin-left: 30px;
+            margin-left: 40px; /* Mais espaçamento */
         }
         .nav-menu a {
             color: var(--white);
-            font-weight: 600;
-            font-size: 1em;
-            padding: 5px 0;
+            font-weight: 500; /* Levemente menos negrito */
+            font-size: 1.05em;
+            padding: 8px 0; /* Mais padding vertical */
             position: relative;
+            letter-spacing: 0.5px;
         }
         .nav-menu a::after {
             content: '';
             position: absolute;
-            left: 0;
-            bottom: -5px;
+            left: 50%; /* Centralizado */
+            bottom: 0;
             width: 0;
-            height: 2px;
+            height: 3px; /* Borda mais grossa */
             background-color: var(--secondary-color);
-            transition: width 0.3s ease;
+            transition: all 0.3s ease;
+            transform: translateX(-50%); /* Centralizado */
         }
-        .nav-menu a:hover::after {
+        .nav-menu a:hover::after, .nav-menu a.active::after {
             width: 100%;
         }
 
@@ -156,34 +187,35 @@
         }
         .hamburger span {
             height: 3px;
-            width: 25px;
+            width: 30px; /* Mais largo */
             background-color: var(--white);
-            margin-bottom: 5px;
+            margin-bottom: 6px; /* Mais espaçamento */
             border-radius: 2px;
             transition: all 0.3s ease-in-out;
         }
-        /* Efeito para o X */
         .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(8px, 8px); /* Ajustado para o X */
         }
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
         .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
+            transform: rotate(-45deg) translate(8px, -8px); /* Ajustado para o X */
         }
 
         /* Hero Section (Home) */
         .hero-home {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(26,42,78,0.9), rgba(26,42,78,0.7)), url('https://source.unsplash.com/random/1920x800?lawyer,digital,success') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 120px 20px;
+            padding: 180px 20px; /* Mais espaçamento */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 60vh;
+            min-height: 70vh; /* Maior altura */
+            position: relative;
+            overflow: hidden; /* Para a sobreposição */
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
@@ -192,28 +224,40 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .hero-home::before { /* Elemento para gradiente sutil */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(224,180,98,0.1), transparent 70%);
+            pointer-events: none;
+        }
         .hero-home h1 {
-            font-size: 3.2em;
-            margin-bottom: 20px;
+            font-size: 3.8em; /* Maior e mais impactante */
+            margin-bottom: 25px;
             color: var(--white);
             font-weight: 700;
-            max-width: 900px;
+            max-width: 1000px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
         }
         .hero-home h2 {
-            font-size: 1.4em;
+            font-size: 1.6em;
             font-weight: 400;
-            margin-bottom: 40px;
-            max-width: 800px;
+            margin-bottom: 50px;
+            max-width: 900px;
             color: rgba(255,255,255,0.9);
+            line-height: 1.5;
         }
 
         /* Hero Section (Páginas Internas - adaptado para seções) */
         .hero-internal {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?law,firm') no-repeat center center/cover;
+            background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?law,firm,justice') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 100px 20px 60px;
-            min-height: 30vh;
+            padding: 120px 20px 80px;
+            min-height: 35vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -226,22 +270,22 @@
             opacity: 1;
             transform: translateY(0);
         }
-
         .hero-internal h1 {
-            font-size: 3em;
+            font-size: 3.2em;
             color: var(--white);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
         .hero-internal p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: rgba(255,255,255,0.9);
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
         /* Seções de Conteúdo (Animação) */
         section {
-            padding: 80px 20px;
+            padding: 100px 20px; /* Mais padding vertical */
             text-align: center;
             opacity: 0;
             transform: translateY(20px);
@@ -251,18 +295,30 @@
             opacity: 1;
             transform: translateY(0);
         }
-        section:nth-of-type(odd) {
+        section:nth-of-type(even) { /* Inverti para o padrão ser claro, alternando com o cinza */
             background-color: var(--light-bg);
         }
         section h2 {
-            font-size: 2.5em;
-            margin-bottom: 40px;
+            font-size: 2.8em;
+            margin-bottom: 60px; /* Mais espaçamento */
             color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 80px; /* Linha de destaque */
+            height: 4px;
+            background-color: var(--secondary-color);
+            transform: translateX(-50%);
         }
         section p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
+            font-size: 1.15em; /* Levemente maior */
+            max-width: 900px; /* Mais largo para o texto */
+            margin: 0 auto 25px auto;
             color: var(--gray-text);
         }
 
@@ -271,48 +327,82 @@
             list-style: none;
             padding: 0;
             text-align: left;
-            max-width: 600px;
+            max-width: 700px; /* Mais largo */
             margin: 0 auto;
         }
         .problem-section ul li {
             background-color: var(--white);
-            margin-bottom: 15px;
-            padding: 20px;
-            border-left: 5px solid var(--secondary-color);
-            border-radius: 5px;
-            font-size: 1.1em;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px; /* Mais espaçamento */
+            padding: 25px; /* Mais padding */
+            border-left: 6px solid var(--secondary-color); /* Borda mais grossa */
+            border-radius: 8px; /* Mais arredondado */
+            font-size: 1.15em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra mais suave */
             color: var(--text-color);
+            transition: transform 0.3s ease;
+        }
+        .problem-section ul li:hover {
+            transform: translateX(10px); /* Animação ao hover */
         }
 
         /* Grid de Serviços/Diferenciais */
         .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min-width maior */
+            gap: 40px; /* Mais espaçamento */
+            margin-top: 60px;
         }
         .grid-item {
             background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 40px; /* Mais padding */
+            border-radius: 10px; /* Mais arredondado */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Sombra mais proeminente */
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .grid-item::before { /* Efeito de brilho */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(224,180,98,0.05), transparent 50%, rgba(26,42,78,0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        .grid-item:hover::before {
+            opacity: 1;
         }
         .grid-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transform: translateY(-8px); /* Mais movimento */
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2); /* Sombra mais intensa */
         }
         .grid-item h3 {
-            font-size: 1.4em;
+            font-size: 1.8em;
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
         .grid-item p {
-            font-size: 1em;
+            font-size: 1.05em;
             margin-bottom: 0;
             color: var(--gray-text);
+            position: relative;
+            z-index: 1;
+        }
+        .grid-item i {
+            font-size: 3.5em; /* Ícone maior */
+            color: var(--secondary-color);
+            margin-bottom: 25px;
         }
 
         /* Seção de Processo */
@@ -320,56 +410,77 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-top: 60px;
         }
         .step-item {
-            flex: 1 1 300px;
+            flex: 1 1 320px; /* Base maior */
             background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             text-align: center;
             position: relative;
+            transition: all 0.3s ease;
+        }
+        .step-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
         .step-item .step-number {
-            font-size: 3em;
+            font-size: 4em; /* Maior número */
             font-weight: 700;
             color: var(--secondary-color);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             line-height: 1;
+            position: relative;
+            z-index: 1;
         }
         .step-item h3 {
-            font-size: 1.6em;
+            font-size: 1.8em;
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .step-item p {
+            font-size: 1.05em;
+            color: var(--gray-text);
         }
 
         /* Seção de Depoimentos */
         .testimonials-section {
             background-color: var(--light-bg);
+            padding: 100px 20px;
         }
         .testimonial-item {
             background-color: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            max-width: 700px;
-            margin: 30px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 40px auto; /* Mais espaçamento */
             font-style: italic;
-            font-size: 1.1em;
+            font-size: 1.2em; /* Texto maior */
             position: relative;
             color: var(--text-color);
+            line-height: 1.8;
+            border-left: 6px solid var(--secondary-color);
         }
         .testimonial-item::before {
             content: '“';
-            font-family: serif;
-            font-size: 4em;
+            font-family: 'Playfair Display', serif;
+            font-size: 6em; /* Citação maior */
             color: var(--secondary-color);
             position: absolute;
-            top: 10px;
+            top: -10px; /* Ajuste da posição */
             left: 20px;
-            opacity: 0.2;
+            opacity: 0.15;
+            z-index: 0;
+            line-height: 0.8;
+        }
+        .testimonial-item p {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
         }
         .testimonial-author {
             font-style: normal;
@@ -377,44 +488,63 @@
             color: var(--primary-color);
             margin-top: 20px;
             display: block;
+            text-align: right;
+            font-size: 1.1em;
         }
 
         /* FAQ Section */
         .faq-section {
             background-color: var(--white);
+            padding: 100px 20px;
+        }
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
         }
         .faq-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-            text-align: left;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 25px; /* Mais espaçamento */
+            border: 1px solid var(--border-color); /* Borda suave */
+            border-radius: 8px;
+            overflow: hidden; /* Para o efeito de dropdown */
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .faq-item.open {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .faq-question {
             font-weight: 600;
-            font-size: 1.2em;
+            font-size: 1.25em; /* Pergunta maior */
             color: var(--primary-color);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 25px; /* Mais padding */
+            background-color: var(--light-bg); /* Fundo sutil */
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #eaeaea;
         }
         .faq-question::after {
             content: '+';
-            font-size: 1.5em;
-            margin-left: 10px;
+            font-size: 1.8em; /* Ícone maior */
+            margin-left: 15px;
             color: var(--secondary-color);
+            transition: transform 0.3s ease;
         }
         .faq-question.active::after {
             content: '-';
+            transform: rotate(180deg); /* Rotação no ícone */
         }
         .faq-answer {
-            margin-top: 10px;
-            font-size: 1em;
+            padding: 20px 25px; /* Mesmo padding da pergunta */
+            font-size: 1.05em;
             color: var(--gray-text);
             display: none;
+            border-top: 1px solid var(--border-color);
         }
         .faq-item.open .faq-answer {
             display: block;
@@ -422,83 +552,102 @@
 
         /* Formulário de Contato */
         .contact-form-section {
-            padding: 60px 20px;
-            background-color: var(--light-bg);
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, var(--light-bg), var(--white));
             text-align: center;
         }
         .contact-form-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 2.8em;
+            margin-bottom: 25px;
         }
         .contact-form-section p {
-            font-size: 1.1em;
-            margin-bottom: 40px;
-            max-width: 700px;
+            font-size: 1.15em;
+            margin-bottom: 50px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
 
         .contact-form {
-            max-width: 600px;
+            max-width: 700px; /* Mais largo */
             margin: 0 auto;
             background-color: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 50px; /* Mais padding */
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* Sombra mais forte */
+            border: 1px solid var(--border-color);
         }
         .contact-form div {
-            margin-bottom: 20px;
+            margin-bottom: 25px; /* Mais espaçamento */
             text-align: left;
         }
         .contact-form label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: var(--text-color);
+            margin-bottom: 10px; /* Mais espaçamento */
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.05em;
         }
         .contact-form input,
         .contact-form select,
         .contact-form textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-            font-family: 'Montserrat', sans-serif;
+            padding: 14px; /* Mais padding */
+            border: 1px solid #ccc;
+            border-radius: 6px; /* Mais arredondado */
+            font-size: 1.05em;
+            font-family: 'Roboto', sans-serif;
             color: var(--text-color);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(224,180,98,0.3); /* Sombra de foco */
+            outline: none;
         }
         .contact-form small {
-            color: #666;
+            color: #777;
             font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
         }
         .contact-form textarea {
             resize: vertical;
+            min-height: 100px;
         }
         .contact-form button {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 15px 30px;
+            padding: 18px 35px; /* Maior e mais impactante */
             border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.3em;
+            font-weight: 700;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             display: block;
             width: 100%;
-            margin-top: 30px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .contact-form button:hover {
             background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
         }
 
         .contact-links {
-            margin-top: 40px;
-            font-size: 1.1em;
+            margin-top: 50px;
+            font-size: 1.2em;
             color: var(--gray-text);
         }
+        .contact-links p {
+            margin-bottom: 15px;
+        }
         .contact-links a {
-            color: var(--primary-color);
             font-weight: bold;
         }
         .contact-links a.whatsapp-link {
@@ -508,111 +657,147 @@
         /* Rodapé */
         footer {
             background-color: var(--primary-color);
-            color: rgba(255,255,255,0.8);
-            padding: 40px 20px;
+            color: rgba(255,255,255,0.85);
+            padding: 50px 20px;
             text-align: center;
-            font-size: 0.9em;
+            font-size: 0.95em;
+            line-height: 1.8;
         }
         footer .logo-container {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         footer .logo {
-            filter: none; /* A foto não precisa de brilho */
+            filter: none;
         }
         footer ul {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 25px 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px 30px;
+            gap: 15px 40px; /* Mais espaçamento */
         }
         footer ul li a {
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.95);
             font-weight: 500;
+            position: relative;
+            padding-bottom: 3px;
         }
-        footer ul li a:hover {
-            color: var(--secondary-color);
+        footer ul li a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        footer ul li a:hover::after {
+            width: 100%;
         }
         .social-icons {
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .social-icons a {
             color: var(--white);
-            font-size: 1.8em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            font-size: 2.2em; /* Ícones maiores */
+            margin: 0 12px;
+            transition: color 0.3s ease, transform 0.2s ease;
         }
         .social-icons a:hover {
             color: var(--secondary-color);
+            transform: translateY(-3px);
         }
 
         /* Botão Flutuante WhatsApp com Animação de Piscar */
         .whatsapp-float {
             position: fixed;
-            width: 60px;
-            height: 60px;
+            width: 65px; /* Um pouco maior */
+            height: 65px;
             bottom: 40px;
             right: 40px;
             background-color: var(--whatsapp-green);
             color: var(--white);
             border-radius: 50px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
+            font-size: 32px; /* Ícone maior */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background-color 0.3s ease;
-            animation: blink 1.5s infinite alternate; /* Adiciona a animação */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            animation: pulse-whatsapp 2s infinite ease-in-out; /* Nova animação de pulso */
         }
         .whatsapp-float:hover {
             background-color: var(--whatsapp-dark);
-            animation-play-state: paused; /* Pausa a animação ao passar o mouse */
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            animation-play-state: paused;
         }
 
-        /* Animação de Piscar */
-        @keyframes blink {
-            from { opacity: 1; }
-            to { opacity: 0.7; }
+        /* Animação de Pulso para WhatsApp */
+        @keyframes pulse-whatsapp {
+            0% { transform: scale(1); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+            100% { transform: scale(1); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         }
 
         /* Responsividade para Telas Menores que 992px */
         @media (max-width: 992px) {
+            h1 { font-size: 2.8em; }
+            h2 { font-size: 2.2em; }
+            h3 { font-size: 1.6em; }
+
             .nav-menu {
                 display: none;
                 flex-direction: column;
                 width: 100%;
                 background-color: var(--primary-color);
                 position: absolute;
-                top: 70px;
+                top: 85px; /* Ajustado */
                 left: 0;
-                padding-bottom: 20px;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding-bottom: 25px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             }
             .nav-menu.active {
                 display: flex;
             }
             .nav-menu li {
-                margin: 10px 0;
+                margin: 15px 0;
                 text-align: center;
             }
             .hamburger {
                 display: flex;
             }
-            .hero-home h1, .hero-internal h1 {
-                font-size: 2.2rem; /* Ajustado para melhor leitura */
+            .hero-home {
+                padding: 150px 20px 100px;
+                min-height: 50vh;
             }
-            .hero-home h2, .hero-internal p {
-                font-size: 1rem; /* Ajustado para melhor leitura */
+            .hero-home h1 {
+                font-size: 2.5em;
+            }
+            .hero-home h2 {
+                font-size: 1.3em;
+            }
+            .hero-internal {
+                padding: 100px 20px 60px;
+            }
+            .hero-internal h1 {
+                font-size: 2.5em;
+            }
+            .hero-internal p {
+                font-size: 1.1em;
             }
             section {
-                padding: 40px 15px; /* Reduzido o padding */
+                padding: 70px 15px;
             }
             section h2 {
-                font-size: 1.6rem; /* Ajustado */
+                font-size: 2em;
+                margin-bottom: 40px;
             }
             .grid-layout, .process-steps {
                 grid-template-columns: 1fr;
@@ -621,98 +806,136 @@
                 flex: none;
             }
             .whatsapp-float {
-                bottom: 15px; /* Mais para cima */
-                right: 15px; /* Mais para dentro */
-                width: 55px; /* Ligeiramente menor */
-                height: 55px;
-                font-size: 28px; /* Ícone menor */
+                bottom: 25px;
+                right: 25px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
             }
             footer ul {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
+            }
+            .contact-form {
+                padding: 30px;
             }
         }
 
         /* Responsividade para Telas MUITO pequenas (celulares menores) */
         @media (max-width: 576px) {
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.4em; }
+            p { font-size: 1em; }
+
             .navbar {
-                padding: 0 10px;
+                padding: 0 15px;
             }
             .logo {
-                width: 65px; /* Logo um pouco menor */
-                height: 65px;
+                width: 60px;
+                height: 60px;
             }
-            .hero-home h1, .hero-internal h1 {
-                font-size: 1.8rem;
+            .hero-home {
+                padding: 100px 15px 70px;
+            }
+            .hero-home h1 {
+                font-size: 1.8em;
                 line-height: 1.3;
             }
-            .hero-home h2, .hero-internal p {
-                font-size: 0.95rem;
+            .hero-home h2 {
+                font-size: 1.1em;
+                margin-bottom: 30px;
             }
             .hero-home .btn {
                 padding: 12px 25px;
                 font-size: 1em;
             }
-            section h2 {
-                font-size: 1.4rem;
+            .hero-internal {
+                padding: 80px 15px 50px;
             }
-            section p {
-                font-size: 0.9em;
+            .hero-internal h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 50px 15px;
+            }
+            section h2 {
+                font-size: 1.6em;
+            }
+            .problem-section ul li {
+                font-size: 1em;
+                padding: 20px;
             }
             .grid-item {
-                padding: 20px;
+                padding: 30px;
             }
             .grid-item h3 {
                 font-size: 1.2em;
             }
-            .problem-section ul li {
-                font-size: 1em;
-                padding: 15px;
+            .grid-item i {
+                font-size: 3em;
+            }
+            .testimonial-item {
+                font-size: 1.1em;
+                padding: 30px;
+            }
+            .testimonial-item::before {
+                font-size: 5em;
+                top: 0px;
             }
             .faq-question {
                 font-size: 1.1em;
+                padding: 18px 20px;
+            }
+            .faq-answer {
+                padding: 18px 20px;
             }
             .contact-form {
                 padding: 25px;
             }
+            .contact-form label {
+                font-size: 1em;
+            }
+            .contact-form input, .contact-form select, .contact-form textarea {
+                padding: 12px;
+                font-size: 1em;
+            }
             .contact-form button {
-                padding: 12px 20px;
+                padding: 14px 25px;
+                font-size: 1.1em;
+            }
+            .contact-links {
                 font-size: 1em;
             }
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
-                font-size: 24px;
-                bottom: 10px; /* Ainda mais para cima */
-                right: 10px; /* Ainda mais para dentro */
+                font-size: 26px;
+                bottom: 15px;
+                right: 15px;
             }
         }
 
         /* Otimização para larguras EXTREMAMENTE pequenas, como 320px */
         @media (max-width: 375px) {
-            .hero-home h1, .hero-internal h1 {
-                font-size: 1.5rem;
-            }
-            .hero-home h2, .hero-internal p {
-                font-size: 0.85rem;
-            }
-            section h2 {
-                font-size: 1.2rem;
-            }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            .hero-home h1 { font-size: 1.5em; }
+            .hero-home h2 { font-size: 0.95em; }
             .logo {
-                width: 55px;
-                height: 55px;
+                width: 50px;
+                height: 50px;
             }
-            .hamburger { /* Ajusta a margem do hamburger se ele estiver muito perto da logo */
+            .hamburger {
                 margin-left: auto;
                 margin-right: 5px;
             }
             .whatsapp-float {
                 width: 45px;
                 height: 45px;
-                font-size: 20px;
-                bottom: 8px; /* Mais para cima */
-                right: 8px; /* Mais para dentro */
+                font-size: 22px;
+                bottom: 10px;
+                right: 10px;
             }
         }
     </style>
@@ -731,7 +954,7 @@
                     <li><a href="#home">Início</a></li>
                     <li><a href="#sobre-nos">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#etica-oab">Ética & OAB</a></li>
+                    <li><a href="#etica-oab">Ética e OAB</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -744,7 +967,7 @@
     </header>
 
     <main>
-        <section id="home" class="hero-home" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x600?legal,digital,office') no-repeat center center/cover;">
+        <section id="home" class="hero-home" style="background: linear-gradient(to bottom, rgba(26,42,78,0.9), rgba(26,42,78,0.7)), url('https://source.unsplash.com/random/1920x800?lawyer,digital,success') no-repeat center center/cover;">
             <div class="container">
                 <h1>JurisPró Marketing: A Excelência Jurídica no Digital, com Ética e Resultados.</h1>
                 <h2>Transformamos a presença online de advogados e escritórios em todo o Brasil, impulsionando sua autoridade e atraindo clientes qualificados, sempre em conformidade com a OAB.</h2>
@@ -757,16 +980,16 @@
                 <h2>Seus Desafios de Marketing na Advocacia Encontram Solução Aqui.</h2>
                 <p>No cenário jurídico atual, apenas a excelência técnica já não basta para alcançar o sucesso. Muitos advogados e escritórios em todo o Brasil enfrentam:</p>
                 <ul>
-                    <li>⏳ Falta de tempo para se dedicar à presença online.</li>
-                    <li>🚨 Medo de violar as normas da OAB sobre publicidade.</li>
-                    <li>👥 Dificuldade em atrair novos clientes de forma ética.</li>
-                    <li>📈 Concorrência acirrada e a necessidade de se diferenciar.</li>
+                    <li>Falta de tempo para se dedicar à presença online.</li>
+                    <li>Medo de violar as normas da OAB sobre publicidade.</li>
+                    <li>Dificuldade em atrair novos clientes de forma ética.</li>
+                    <li>Concorrência acirrada e a necessidade de se diferenciar.</li>
                 </ul>
                 <p style="margin-top: 30px;">Se você busca um crescimento sustentável e estratégico para sua banca, nós temos a solução.</p>
             </div>
         </section>
 
-        <section id="sobre-nos" class="hero-internal fade-in-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?team,collaboration,professional') no-repeat center center/cover;">
+        <section id="sobre-nos" class="hero-internal fade-in-section" style="background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?team,collaboration,professional') no-repeat center center/cover;">
             <div class="container">
                 <h1>Nossa Essência: A Força da Ética e Estratégia na Advocacia Digital.</h1>
                 <p>Paixão pela advocacia, expertise em marketing digital e compromisso inabalável com a ética. Conheça a JurisPró Marketing.</p>
@@ -775,7 +998,7 @@
         <section class="fade-in-section" style="background-color: var(--white);">
             <div class="container">
                 <h2>Uma Jornada Pelo Sucesso Ético na Advocacia Digital.</h2>
-                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em todo o Brasil se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com **experiência consolidada em marketing e uma visão aprofundada do universo jurídico**, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
+                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em todo o Brasil se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com experiência consolidada em marketing e uma visão aprofundada do universo jurídico, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
                 <p>Desde então, nos dedicamos a construir pontes entre a advocacia e o mundo digital, sempre priorizando a conformidade com as normas da OAB e a entrega de resultados que realmente fazem a diferença para a carreira de nossos clientes.</p>
             </div>
         </section>
@@ -785,20 +1008,23 @@
                 <h2>Nossa Missão, Visão e Valores.</h2>
                 <div class="grid-layout">
                     <div class="grid-item">
+                        <i class="fas fa-bullseye"></i>
                         <h3>Missão</h3>
                         <p>Impulsionar o reconhecimento e o crescimento de advogados e escritórios de advocacia por meio de estratégias de marketing digital inovadoras, éticas e focadas em resultados, garantindo total conformidade com as normas da OAB.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-eye"></i>
                         <h3>Visão</h3>
                         <p>Ser a agência de marketing jurídico referência no Brasil, reconhecida pela excelência, ética inabalável e pela capacidade de transformar a presença digital de profissionais do direito em ativos de alto valor.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-handshake"></i>
                         <h3>Valores</h3>
                         <ul class="content-list" style="margin-top: 20px; text-align: left; max-width: none;">
-                            <li>**Ética e Transparência:** Atuamos com a máxima integridade e clareza em todas as nossas relações.</li>
-                            <li>**Excelência e Inovação:** Buscamos sempre as melhores soluções e estamos em constante atualização.</li>
-                            <li>**Parceria e Confiança:** Construímos relacionamentos duradouros baseados no respeito e na colaboração mútua.</li>
-                            <li>**Resultados e Responsabilidade:** Nosso foco é o crescimento do cliente, com responsabilidade e mensuração.</li>
+                            <li><strong>Ética e Transparência:</strong> Atuamos com a máxima integridade e clareza em todas as nossas relações.</li>
+                            <li><strong>Excelência e Inovação:</strong> Buscamos sempre as melhores soluções e estamos em constante atualização.</li>
+                            <li><strong>Parceria e Confiança:</strong> Construímos relacionamentos duradouros baseados no respeito e na colaboração mútua.</li>
+                            <li><strong>Resultados e Responsabilidade:</strong> Nosso foco é o crescimento do cliente, com responsabilidade e mensuração.</li>
                         </ul>
                     </div>
                 </div>
@@ -807,20 +1033,20 @@
 
         <section class="fade-in-section" style="background-color: var(--white);">
             <div class="container">
-                <h2>Mentes Estratégicas por Trás do Seu Sucesso.</h2>
+                <h2>Mente Estratégica Por Trás do Seu Sucesso.</h2>
                 <p>Conheça o profissional que lidera a JurisPró Marketing. Um especialista em marketing digital e, acima de tudo, apaixonado pelo universo jurídico e pela sua ética.</p>
                 <div class="grid-layout" style="margin-top: 40px; justify-content: center; /* Centraliza o item */">
                     <div class="grid-item">
-                        <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753975584/photo_2025-07-31_12-26-06_snzu95.jpg" alt="Foto de Ademir Rodrigues" style="border-radius: 50%; margin-bottom: 15px; width: 150px; height: 150px; object-fit: cover;">
+                        <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753975584/photo_2025-07-31_12-26-06_snzu95.jpg" alt="Foto de Ademir Rodrigues" style="border-radius: 50%; margin-bottom: 20px; width: 180px; height: 180px; object-fit: cover; border: 4px solid var(--secondary-color);">
                         <h3>Ademir Rodrigues</h3>
-                        <p>CEO & Fundador</p>
-                        <p style="font-size: 0.9em;">Com vasta experiência em marketing digital e uma paixão pela ética jurídica, Ademir lidera a equipe com foco em inovação e resultados para a advocacia.</p>
+                        <p>CEO e Fundador</p>
+                        <p style="font-size: 0.95em;">Com vasta experiência em marketing digital e uma paixão pela ética jurídica, Ademir lidera a equipe com foco em inovação e resultados para a advocacia.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="servicos" class="hero-internal fade-in-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?digital,marketing,strategy') no-repeat center center/cover;">
+        <section id="servicos" class="hero-internal fade-in-section" style="background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?digital,marketing,strategy') no-repeat center center/cover;">
             <div class="container">
                 <h1>Nossas Soluções: Impulsionando Sua Advocacia com Estratégia e Ética.</h1>
                 <p>Oferecemos um portfólio completo de soluções digitais pensadas exclusivamente para as necessidades de advogados e escritórios de advocacia em todo o Brasil.</p>
@@ -832,22 +1058,27 @@
                 <h2>Descubra Como Podemos Transformar Sua Presença Online:</h2>
                 <div class="grid-layout">
                     <div class="grid-item">
+                        <i class="fas fa-file-alt"></i>
                         <h3>Marketing de Conteúdo Jurídico Estratégico</h3>
-                        <p>Desenvolvemos artigos, e-books, e posts que posicionam você como uma autoridade inquestionável em sua área, atraindo clientes qualificados e respeitando as diretrizes da OAB.</p>
+                        <p>Desenvolvemos artigos, e-books e posts que posicionam você como uma autoridade inquestionável em sua área, atraindo clientes qualificados e respeitando as diretrizes da OAB.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-share-alt"></i>
                         <h3>Gestão de Redes Sociais e Presença Digital</h3>
                         <p>Criamos e gerenciamos seus perfis em plataformas como Instagram e LinkedIn, com um planejamento editorial ético e postagens de alto impacto visual e informativo.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-search"></i>
                         <h3>SEO para Advogados (Otimização para Mecanismos de Busca)</h3>
                         <p>Otimizamos seu site e conteúdo para que apareçam nas primeiras posições do Google, conectando você a quem busca por serviços jurídicos em todo o Brasil.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-globe"></i>
                         <h3>Criação e Otimização de Sites e Blogs Jurídicos</h3>
                         <p>Desenvolvemos sites modernos, intuitivos e em conformidade com a OAB, que funcionam como sua principal vitrine digital e centralizam sua autoridade.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-comments"></i>
                         <h3>Consultoria em Marketing Jurídico Personalizada</h3>
                         <p>Orientação focada nas suas necessidades específicas, com análise da sua situação e um plano de ação estratégico e ético para o seu crescimento.</p>
                     </div>
@@ -855,7 +1086,7 @@
             </div>
         </section>
 
-        <section id="etica-oab" class="hero-internal fade-in-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?justice,ethics,law') no-repeat center center/cover;">
+        <section id="etica-oab" class="hero-internal fade-in-section" style="background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?justice,ethics,law') no-repeat center center/cover;">
             <div class="container">
                 <h1>Ética e Conformidade: O Pilar da Sua Presença Digital na Advocacia.</h1>
                 <p>Na JurisPró Marketing, a ética é o alicerce de todas as nossas estratégias, garantindo sua segurança e credibilidade online.</p>
@@ -867,18 +1098,22 @@
                 <h2>Descubra Como Garantimos Seu Sucesso com Integridade:</h2>
                 <div class="grid-layout">
                     <div class="grid-item">
+                        <i class="fas fa-balance-scale"></i>
                         <h3>Total Conformidade ao Provimento nº 205/2021 da OAB</h3>
                         <p>Todas as nossas ações de marketing são rigorosamente planejadas e executadas em estrita observância ao Provimento nº 205/2021 do Conselho Federal da OAB. Sua publicidade será sempre informativa, discreta e focada na valorização da sua expertise jurídica, evitando riscos de sanções.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-book-reader"></i>
                         <h3>Marketing de Conteúdo que Educa, Não Mercantiliza</h3>
                         <p>Priorizamos a criação de conteúdo jurídico de valor que informa, educa e esclarece dúvidas do público. Posicione-se como uma fonte confiável de conhecimento, e não como um mero "vendedor de serviços", fortalecendo o respeito pela sua profissão.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-lightbulb"></i>
                         <h3>Transparência e Clareza em Cada Passo</h3>
                         <p>Mantemos uma comunicação transparente com nossos clientes sobre as diretrizes da OAB e como cada estratégia se encaixa nelas. Você terá total controle e compreensão sobre suas ações de marketing, alinhadas à realidade ética.</p>
                     </div>
                     <div class="grid-item">
+                        <i class="fas fa-award"></i>
                         <h3>Foco na Construção de Autoridade e Reputação</h3>
                         <p>Mais do que gerar cliques, nosso foco é construir sua autoridade digital e fortalecer sua reputação no mercado. Atraia clientes que valorizam sua especialização e experiência, e não apenas o preço.</p>
                     </div>
@@ -951,7 +1186,7 @@
             </div>
         </section>
 
-        <section id="contato" class="hero-internal fade-in-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x400?contact,phone,email') no-repeat center center/cover;">
+        <section id="contato" class="hero-internal fade-in-section" style="background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?contact,phone,email') no-repeat center center/cover;">
             <div class="container">
                 <h1>Fale Conosco: Sua Advocacia Merece Destaque.</h1>
                 <p>Preencha o formulário ou use nossos canais diretos para agendar sua consultoria gratuita. Estamos prontos para te ajudar!</p>
@@ -961,21 +1196,21 @@
         <section class="contact-form-section fade-in-section" style="background-color: var(--light-bg);">
             <div class="container">
                 <h2>Agende Sua Consultoria Gratuita e Estratégica!</h2>
-                <p>Preencha o formulário abaixo. **(Lembre-se: Este formulário não envia dados automaticamente. Você pode copiar as informações preenchidas para nos enviar por WhatsApp ou e-mail após preencher.)**</p>
+                <p>Preencha o formulário abaixo. Este formulário não envia dados automaticamente. Você pode copiar as informações preenchidas para nos enviar por WhatsApp ou e-mail após preencher.</p>
 
                 <form id="contactForm" class="contact-form">
                     <div>
-                        <label for="nome">Nome Completo do Advogado(a)*</label>
+                        <label for="nome">Nome Completo do Advogado(a) (campo obrigatório)</label>
                         <input type="text" id="nome" name="nome_completo" required>
                     </div>
 
                     <div>
-                        <label for="email">E-mail Profissional*</label>
+                        <label for="email">E-mail Profissional (campo obrigatório)</label>
                         <input type="email" id="email" name="email_profissional" required>
                     </div>
 
                     <div>
-                        <label for="whatsapp-form">Telefone / WhatsApp*</label>
+                        <label for="whatsapp-form">Telefone / WhatsApp (campo obrigatório)</label>
                         <input type="tel" id="whatsapp-form" name="telefone_whatsapp" required pattern="[0-9]{11}" placeholder="Ex: 83996999840">
                         <small>Formato: DDNNNNNNNNN (apenas números, 11 dígitos)</small>
                     </div>
@@ -986,12 +1221,12 @@
                     </div>
 
                     <div>
-                        <label for="area_atuacao">Principal(is) Área(s) de Atuação Jurídica*</label>
+                        <label for="area_atuacao">Principal(is) Área(s) de Atuação Jurídica (campo obrigatório)</label>
                         <input type="text" id="area_atuacao" name="area_atuacao" required placeholder="Ex: Direito Civil, Penal, Empresarial">
                     </div>
 
                     <div>
-                        <label for="desafio">Qual seu maior desafio de marketing jurídico hoje?*</label>
+                        <label for="desafio">Qual seu maior desafio de marketing jurídico hoje? (campo obrigatório)</label>
                         <textarea id="desafio" name="maior_desafio" rows="4" required placeholder="Ex: Atrair mais clientes, construir autoridade online, entender as regras da OAB..."></textarea>
                     </div>
 
@@ -1030,8 +1265,6 @@
                         <textarea id="mensagem_adicional" name="mensagem_adicional" rows="3" placeholder="Compartilhe qualquer informação adicional relevante."></textarea>
                     </div>
 
-                    <p style="font-size: 0.9em; color: #777; margin-top: 15px;">* Campos obrigatórios</p>
-
                     <button type="button" class="btn" onclick="openWhatsAppWithFormData()">
                         Agendar Minha Consultoria Gratuita via WhatsApp
                     </button>
@@ -1060,7 +1293,7 @@
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre-nos">Sobre Nós</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#etica-oab">Ética & OAB</a></li>
+                <li><a href="#etica-oab">Ética e OAB</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <p><strong>JurisPró Marketing</strong> | Estratégias Jurídicas Éticas para Advogados.</p>
@@ -1089,6 +1322,7 @@
             item.addEventListener('click', event => {
                 const faqItem = item.closest('.faq-item');
                 faqItem.classList.toggle('open');
+                item.classList.toggle('active'); // Ativa/desativa a classe para o ícone
             });
         });
 
@@ -1145,13 +1379,41 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Para animar apenas uma vez
+                        // observer.unobserve(entry.target); // Deixe comentado se quiser que anime sempre que entra/sai da tela
+                    } else {
+                        // entry.target.classList.remove('is-visible'); // Descomente se quiser que a animação "reapareça" ao rolar de volta
                     }
                 });
             }, observerOptions);
 
             sections.forEach(section => {
                 observer.observe(section);
+            });
+
+            // Adicionar classe "active" ao link de navegação da seção atual
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            const sectionsForNav = document.querySelectorAll('section[id]'); // Seleciona apenas seções com ID
+
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        const currentNavLink = document.querySelector(`.nav-menu a[href="#${entry.target.id}"]`);
+                        if (currentNavLink) {
+                            currentNavLink.classList.add('active');
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -50% 0px', // Ativa quando a seção está no meio da tela
+                threshold: 0 // Ajuste conforme necessário
+            });
+
+            sectionsForNav.forEach(section => {
+                navObserver.observe(section);
             });
         });
     </script>
