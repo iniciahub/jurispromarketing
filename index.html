@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JurisPró Marketing | A Advocacia no Digital com Ética e Resultados</title>
-    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png">
-    <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
+    <link rel="icon" href="https://via.placeholder.com/32x32/1a2a4e/ffffff?text=JP" type="image/png"> <meta name="description" content="JurisPró Marketing: Soluções completas de marketing jurídico ético e estratégico para advogados e escritórios de advocacia em todo o Brasil. Construa sua autoridade digital e atraia clientes qualificados.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
@@ -33,10 +32,10 @@
         }
 
         html {
-            font-size: 16px;
+            font-size: 16px; /* Base para unidades rem */
             height: 100%;
             scroll-behavior: smooth;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Previne rolagem horizontal */
         }
 
         body {
@@ -72,10 +71,6 @@
             line-height: 1.2;
             font-weight: 700;
         }
-
-        h1 { font-size: 3.5em; } /* Grandes títulos */
-        h2 { font-size: 2.8em; } /* Títulos de seção */
-        h3 { font-size: 1.8em; } /* Títulos de item/card */
 
         p {
             margin-bottom: 1em;
@@ -135,12 +130,13 @@
         .logo {
             width: 70px; /* Tamanho da logo */
             height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
+            border-radius: 50%; /* Torna a foto redonda */
+            object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
             border: 3px solid var(--secondary-color); /* Borda mais grossa */
             box-shadow: 0 0 0 0 rgba(224, 180, 98, 0);
             transition: all 0.5s ease-in-out;
         }
+        /* Efeito Criativo na Logo (Pulso de Sombra) */
         .logo:hover {
             box-shadow: 0 0 18px 6px rgba(224, 180, 98, 0.8); /* Sombra mais intensa */
             transform: scale(1.05); /* Leve aumento ao hover */
@@ -156,23 +152,23 @@
             margin-left: 40px; /* Mais espaçamento */
         }
         .nav-menu a {
-            color: var(--white);
-            font-weight: 500; /* Levemente menos negrito */
+            color: var(--white); /* Texto sempre branco no header */
+            font-weight: 500;
             font-size: 1.05em;
-            padding: 8px 0; /* Mais padding vertical */
+            padding: 8px 0;
             position: relative;
             letter-spacing: 0.5px;
         }
         .nav-menu a::after {
             content: '';
             position: absolute;
-            left: 50%; /* Centralizado */
+            left: 50%;
             bottom: 0;
             width: 0;
-            height: 3px; /* Borda mais grossa */
+            height: 3px;
             background-color: var(--secondary-color);
             transition: all 0.3s ease;
-            transform: translateX(-50%); /* Centralizado */
+            transform: translateX(-50%);
         }
         .nav-menu a:hover::after, .nav-menu a.active::after {
             width: 100%;
@@ -187,35 +183,35 @@
         }
         .hamburger span {
             height: 3px;
-            width: 30px; /* Mais largo */
+            width: 30px;
             background-color: var(--white);
-            margin-bottom: 6px; /* Mais espaçamento */
+            margin-bottom: 6px;
             border-radius: 2px;
             transition: all 0.3s ease-in-out;
         }
         .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px); /* Ajustado para o X */
+            transform: rotate(45deg) translate(8px, 8px);
         }
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
         .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(8px, -8px); /* Ajustado para o X */
+            transform: rotate(-45deg) translate(8px, -8px);
         }
 
         /* Hero Section (Home) */
         .hero-home {
-            background: linear-gradient(to bottom, rgba(26,42,78,0.9), rgba(26,42,78,0.7)), url('https://source.unsplash.com/random/1920x800?lawyer,digital,success') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x800?legal,digital,office') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 180px 20px; /* Mais espaçamento */
+            padding: 180px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 70vh; /* Maior altura */
+            min-height: 70vh;
             position: relative;
-            overflow: hidden; /* Para a sobreposição */
+            overflow: hidden;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
@@ -224,7 +220,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .hero-home::before { /* Elemento para gradiente sutil */
+        .hero-home::before {
             content: '';
             position: absolute;
             top: 0;
@@ -235,9 +231,9 @@
             pointer-events: none;
         }
         .hero-home h1 {
-            font-size: 3.8em; /* Maior e mais impactante */
+            font-size: 3.8em;
             margin-bottom: 25px;
-            color: var(--white);
+            color: var(--white); /* Títulos em branco no Hero Home */
             font-weight: 700;
             max-width: 1000px;
             text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
@@ -247,13 +243,13 @@
             font-weight: 400;
             margin-bottom: 50px;
             max-width: 900px;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.9); /* Subtítulo em branco no Hero Home */
             line-height: 1.5;
         }
 
         /* Hero Section (Páginas Internas - adaptado para seções) */
         .hero-internal {
-            background: linear-gradient(to bottom, rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?law,firm,justice') no-repeat center center/cover;
+            background: linear-gradient(rgba(26,42,78,0.8), rgba(26,42,78,0.6)), url('https://source.unsplash.com/random/1920x450?law,firm,justice') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
             padding: 120px 20px 80px;
@@ -272,20 +268,20 @@
         }
         .hero-internal h1 {
             font-size: 3.2em;
-            color: var(--white);
+            color: var(--white); /* Títulos em branco no Hero Interno */
             margin-bottom: 20px;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
         .hero-internal p {
             font-size: 1.3em;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.9); /* Texto em branco no Hero Interno */
             max-width: 900px;
             margin: 0 auto;
         }
 
         /* Seções de Conteúdo (Animação) */
         section {
-            padding: 100px 20px; /* Mais padding vertical */
+            padding: 100px 20px;
             text-align: center;
             opacity: 0;
             transform: translateY(20px);
@@ -300,7 +296,7 @@
         }
         section h2 {
             font-size: 2.8em;
-            margin-bottom: 60px; /* Mais espaçamento */
+            margin-bottom: 60px;
             color: var(--primary-color);
             position: relative;
             padding-bottom: 15px;
@@ -310,14 +306,14 @@
             position: absolute;
             left: 50%;
             bottom: 0;
-            width: 80px; /* Linha de destaque */
+            width: 80px;
             height: 4px;
             background-color: var(--secondary-color);
             transform: translateX(-50%);
         }
         section p {
-            font-size: 1.15em; /* Levemente maior */
-            max-width: 900px; /* Mais largo para o texto */
+            font-size: 1.15em;
+            max-width: 900px;
             margin: 0 auto 25px auto;
             color: var(--gray-text);
         }
@@ -327,36 +323,36 @@
             list-style: none;
             padding: 0;
             text-align: left;
-            max-width: 700px; /* Mais largo */
+            max-width: 700px;
             margin: 0 auto;
         }
         .problem-section ul li {
             background-color: var(--white);
-            margin-bottom: 20px; /* Mais espaçamento */
-            padding: 25px; /* Mais padding */
-            border-left: 6px solid var(--secondary-color); /* Borda mais grossa */
-            border-radius: 8px; /* Mais arredondado */
+            margin-bottom: 20px;
+            padding: 25px;
+            border-left: 6px solid var(--secondary-color);
+            border-radius: 8px;
             font-size: 1.15em;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra mais suave */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             color: var(--text-color);
             transition: transform 0.3s ease;
         }
         .problem-section ul li:hover {
-            transform: translateX(10px); /* Animação ao hover */
+            transform: translateX(10px);
         }
 
         /* Grid de Serviços/Diferenciais */
         .grid-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Min-width maior */
-            gap: 40px; /* Mais espaçamento */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
             margin-top: 60px;
         }
         .grid-item {
             background-color: var(--white);
-            padding: 40px; /* Mais padding */
-            border-radius: 10px; /* Mais arredondado */
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Sombra mais proeminente */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
@@ -366,7 +362,7 @@
             justify-content: flex-start;
             align-items: center;
         }
-        .grid-item::before { /* Efeito de brilho */
+        .grid-item::before {
             content: '';
             position: absolute;
             top: 0;
@@ -382,8 +378,8 @@
             opacity: 1;
         }
         .grid-item:hover {
-            transform: translateY(-8px); /* Mais movimento */
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2); /* Sombra mais intensa */
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
         .grid-item h3 {
             font-size: 1.8em;
@@ -400,7 +396,7 @@
             z-index: 1;
         }
         .grid-item i {
-            font-size: 3.5em; /* Ícone maior */
+            font-size: 3.5em;
             color: var(--secondary-color);
             margin-bottom: 25px;
         }
@@ -414,7 +410,7 @@
             margin-top: 60px;
         }
         .step-item {
-            flex: 1 1 320px; /* Base maior */
+            flex: 1 1 320px;
             background-color: var(--white);
             padding: 40px;
             border-radius: 10px;
@@ -428,7 +424,7 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.2);
         }
         .step-item .step-number {
-            font-size: 4em; /* Maior número */
+            font-size: 4em;
             font-weight: 700;
             color: var(--secondary-color);
             margin-bottom: 15px;
@@ -446,52 +442,6 @@
             color: var(--gray-text);
         }
 
-        /* Seção de Depoimentos */
-        .testimonials-section {
-            background-color: var(--light-bg);
-            padding: 100px 20px;
-        }
-        .testimonial-item {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: 40px auto; /* Mais espaçamento */
-            font-style: italic;
-            font-size: 1.2em; /* Texto maior */
-            position: relative;
-            color: var(--text-color);
-            line-height: 1.8;
-            border-left: 6px solid var(--secondary-color);
-        }
-        .testimonial-item::before {
-            content: '“';
-            font-family: 'Playfair Display', serif;
-            font-size: 6em; /* Citação maior */
-            color: var(--secondary-color);
-            position: absolute;
-            top: -10px; /* Ajuste da posição */
-            left: 20px;
-            opacity: 0.15;
-            z-index: 0;
-            line-height: 0.8;
-        }
-        .testimonial-item p {
-            position: relative;
-            z-index: 1;
-            margin-bottom: 20px;
-        }
-        .testimonial-author {
-            font-style: normal;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-top: 20px;
-            display: block;
-            text-align: right;
-            font-size: 1.1em;
-        }
-
         /* FAQ Section */
         .faq-section {
             background-color: var(--white);
@@ -502,10 +452,10 @@
             margin: 0 auto;
         }
         .faq-item {
-            margin-bottom: 25px; /* Mais espaçamento */
-            border: 1px solid var(--border-color); /* Borda suave */
+            margin-bottom: 25px;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            overflow: hidden; /* Para o efeito de dropdown */
+            overflow: hidden;
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
@@ -515,14 +465,14 @@
         }
         .faq-question {
             font-weight: 600;
-            font-size: 1.25em; /* Pergunta maior */
+            font-size: 1.25em;
             color: var(--primary-color);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 25px; /* Mais padding */
-            background-color: var(--light-bg); /* Fundo sutil */
+            padding: 20px 25px;
+            background-color: var(--light-bg);
             transition: background-color 0.3s ease;
         }
         .faq-question:hover {
@@ -530,17 +480,17 @@
         }
         .faq-question::after {
             content: '+';
-            font-size: 1.8em; /* Ícone maior */
+            font-size: 1.8em;
             margin-left: 15px;
             color: var(--secondary-color);
             transition: transform 0.3s ease;
         }
         .faq-question.active::after {
             content: '-';
-            transform: rotate(180deg); /* Rotação no ícone */
+            transform: rotate(180deg);
         }
         .faq-answer {
-            padding: 20px 25px; /* Mesmo padding da pergunta */
+            padding: 20px 25px;
             font-size: 1.05em;
             color: var(--gray-text);
             display: none;
@@ -552,39 +502,39 @@
 
         /* Formulário de Contato */
         .contact-form-section {
-            padding: 100px 20px;
+            padding: 60px 20px;
             background: linear-gradient(to bottom, var(--light-bg), var(--white));
             text-align: center;
         }
         .contact-form-section h2 {
-            font-size: 2.8em;
-            margin-bottom: 25px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
         .contact-form-section p {
-            font-size: 1.15em;
-            margin-bottom: 50px;
-            max-width: 800px;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
         }
 
         .contact-form {
-            max-width: 700px; /* Mais largo */
+            max-width: 700px;
             margin: 0 auto;
             background-color: var(--white);
-            padding: 50px; /* Mais padding */
+            padding: 50px;
             border-radius: 10px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* Sombra mais forte */
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
             border: 1px solid var(--border-color);
         }
         .contact-form div {
-            margin-bottom: 25px; /* Mais espaçamento */
+            margin-bottom: 25px;
             text-align: left;
         }
         .contact-form label {
             display: block;
-            margin-bottom: 10px; /* Mais espaçamento */
+            margin-bottom: 10px;
             font-weight: 600;
             color: var(--primary-color);
             font-size: 1.05em;
@@ -593,9 +543,9 @@
         .contact-form select,
         .contact-form textarea {
             width: 100%;
-            padding: 14px; /* Mais padding */
+            padding: 14px;
             border: 1px solid #ccc;
-            border-radius: 6px; /* Mais arredondado */
+            border-radius: 6px;
             font-size: 1.05em;
             font-family: 'Roboto', sans-serif;
             color: var(--text-color);
@@ -605,7 +555,7 @@
         .contact-form select:focus,
         .contact-form textarea:focus {
             border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(224,180,98,0.3); /* Sombra de foco */
+            box-shadow: 0 0 0 3px rgba(224,180,98,0.3);
             outline: none;
         }
         .contact-form small {
@@ -621,7 +571,7 @@
         .contact-form button {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 18px 35px; /* Maior e mais impactante */
+            padding: 18px 35px;
             border: none;
             border-radius: 8px;
             font-size: 1.3em;
@@ -676,10 +626,10 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px 40px; /* Mais espaçamento */
+            gap: 15px 40px;
         }
         footer ul li a {
-            color: rgba(255,255,255,0.95);
+            color: rgba(255,255,255,0.95); /* Texto em branco no footer */
             font-weight: 500;
             position: relative;
             padding-bottom: 3px;
@@ -702,8 +652,8 @@
             margin-top: 25px;
         }
         .social-icons a {
-            color: var(--white);
-            font-size: 2.2em; /* Ícones maiores */
+            color: var(--white); /* Ícones em branco no footer */
+            font-size: 2.2em;
             margin: 0 12px;
             transition: color 0.3s ease, transform 0.2s ease;
         }
@@ -715,22 +665,22 @@
         /* Botão Flutuante WhatsApp com Animação de Piscar */
         .whatsapp-float {
             position: fixed;
-            width: 65px; /* Um pouco maior */
+            width: 65px;
             height: 65px;
             bottom: 40px;
             right: 40px;
             background-color: var(--whatsapp-green);
             color: var(--white);
-            border-radius: 50px;
+            border-radius: 50%;
             text-align: center;
-            font-size: 32px; /* Ícone maior */
+            font-size: 32px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
             z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            animation: pulse-whatsapp 2s infinite ease-in-out; /* Nova animação de pulso */
+            animation: pulse-whatsapp 2s infinite ease-in-out;
         }
         .whatsapp-float:hover {
             background-color: var(--whatsapp-dark);
@@ -748,169 +698,163 @@
 
         /* Responsividade para Telas Menores que 992px */
         @media (max-width: 992px) {
-            h1 { font-size: 2.8em; }
-            h2 { font-size: 2.2em; }
-            h3 { font-size: 1.6em; }
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
 
             .nav-menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: var(--primary-color);
-                position: absolute;
-                top: 85px; /* Ajustado */
-                left: 0;
-                padding-bottom: 25px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            }
-            .nav-menu.active {
-                display: flex;
-            }
-            .nav-menu li {
-                margin: 15px 0;
-                text-align: center;
-            }
-            .hamburger {
-                display: flex;
+                top: 85px; /* Ajustado para a nova altura da logo/header */
             }
             .hero-home {
-                padding: 150px 20px 100px;
+                padding: 120px 20px 80px;
                 min-height: 50vh;
             }
             .hero-home h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
             .hero-home h2 {
-                font-size: 1.3em;
+                font-size: 1.2em;
+                margin-bottom: 40px;
             }
             .hero-internal {
-                padding: 100px 20px 60px;
+                padding: 90px 20px 50px;
+                min-height: 30vh;
             }
             .hero-internal h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
             .hero-internal p {
-                font-size: 1.1em;
+                font-size: 1.05em;
             }
             section {
-                padding: 70px 15px;
+                padding: 60px 15px;
             }
             section h2 {
-                font-size: 2em;
-                margin-bottom: 40px;
+                font-size: 1.8em;
+                margin-bottom: 30px;
             }
             .grid-layout, .process-steps {
                 grid-template-columns: 1fr;
             }
+            .grid-item {
+                padding: 30px;
+            }
             .step-item {
-                flex: none;
+                padding: 30px;
             }
             .whatsapp-float {
-                bottom: 25px;
-                right: 25px;
+                bottom: 20px;
+                right: 20px;
                 width: 60px;
                 height: 60px;
                 font-size: 30px;
             }
             footer ul {
-                flex-direction: column;
-                gap: 15px;
+                gap: 10px;
             }
             .contact-form {
-                padding: 30px;
+                padding: 35px;
             }
         }
 
         /* Responsividade para Telas MUITO pequenas (celulares menores) */
         @media (max-width: 576px) {
-            h1 { font-size: 2.2em; }
-            h2 { font-size: 1.8em; }
-            h3 { font-size: 1.4em; }
-            p { font-size: 1em; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+            h3 { font-size: 1.3em; }
+            p { font-size: 0.95em; }
 
-            .navbar {
-                padding: 0 15px;
-            }
             .logo {
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
             }
             .hero-home {
-                padding: 100px 15px 70px;
+                padding: 80px 15px 50px;
             }
             .hero-home h1 {
-                font-size: 1.8em;
+                font-size: 1.6em;
                 line-height: 1.3;
             }
             .hero-home h2 {
-                font-size: 1.1em;
-                margin-bottom: 30px;
+                font-size: 1em;
+                margin-bottom: 25px;
             }
             .hero-home .btn {
-                padding: 12px 25px;
-                font-size: 1em;
+                padding: 10px 20px;
+                font-size: 0.9em;
             }
             .hero-internal {
-                padding: 80px 15px 50px;
+                padding: 70px 15px 40px;
             }
             .hero-internal h1 {
-                font-size: 2em;
+                font-size: 1.8em;
             }
             section {
-                padding: 50px 15px;
+                padding: 40px 15px;
             }
             section h2 {
-                font-size: 1.6em;
+                font-size: 1.4em;
+                margin-bottom: 25px;
             }
             .problem-section ul li {
-                font-size: 1em;
-                padding: 20px;
+                font-size: 0.95em;
+                padding: 15px;
+                border-left-width: 4px;
             }
             .grid-item {
-                padding: 30px;
-            }
-            .grid-item h3 {
-                font-size: 1.2em;
-            }
-            .grid-item i {
-                font-size: 3em;
-            }
-            .testimonial-item {
-                font-size: 1.1em;
-                padding: 30px;
-            }
-            .testimonial-item::before {
-                font-size: 5em;
-                top: 0px;
-            }
-            .faq-question {
-                font-size: 1.1em;
-                padding: 18px 20px;
-            }
-            .faq-answer {
-                padding: 18px 20px;
-            }
-            .contact-form {
                 padding: 25px;
             }
-            .contact-form label {
-                font-size: 1em;
-            }
-            .contact-form input, .contact-form select, .contact-form textarea {
-                padding: 12px;
-                font-size: 1em;
-            }
-            .contact-form button {
-                padding: 14px 25px;
+            .grid-item h3 {
                 font-size: 1.1em;
             }
-            .contact-links {
+            .grid-item i {
+                font-size: 2.8em;
+                margin-bottom: 15px;
+            }
+            .step-item .step-number {
+                font-size: 3.5em;
+            }
+            .step-item h3 {
+                font-size: 1.4em;
+            }
+            .testimonial-item {
+                font-size: 1em;
+                padding: 25px;
+                border-left-width: 4px;
+            }
+            .testimonial-item::before {
+                font-size: 4.5em;
+                top: -5px;
+            }
+            .faq-question {
+                font-size: 1em;
+                padding: 15px 20px;
+            }
+            .faq-answer {
+                font-size: 0.95em;
+                padding: 15px 20px;
+            }
+            .contact-form {
+                padding: 20px;
+            }
+            .contact-form label {
+                font-size: 0.95em;
+            }
+            .contact-form input, .contact-form select, .contact-form textarea {
+                padding: 10px;
+                font-size: 0.95em;
+            }
+            .contact-form button {
+                padding: 12px 20px;
                 font-size: 1em;
             }
+            .contact-links {
+                font-size: 0.95em;
+            }
             .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 26px;
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
                 bottom: 15px;
                 right: 15px;
             }
@@ -918,24 +862,33 @@
 
         /* Otimização para larguras EXTREMAMENTE pequenas, como 320px */
         @media (max-width: 375px) {
-            h1 { font-size: 1.8em; }
-            h2 { font-size: 1.5em; }
-            .hero-home h1 { font-size: 1.5em; }
-            .hero-home h2 { font-size: 0.95em; }
+            h1 { font-size: 1.6em; }
+            h2 { font-size: 1.4em; }
+            .hero-home h1 { font-size: 1.4em; }
+            .hero-home h2 { font-size: 0.9em; }
             .logo {
-                width: 50px;
-                height: 50px;
+                width: 48px;
+                height: 48px;
             }
             .hamburger {
                 margin-left: auto;
                 margin-right: 5px;
             }
             .whatsapp-float {
-                width: 45px;
-                height: 45px;
-                font-size: 22px;
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
                 bottom: 10px;
                 right: 10px;
+            }
+            section h2 {
+                font-size: 1.2em;
+            }
+            .grid-item h3 {
+                font-size: 1.05em;
+            }
+            .grid-item p {
+                font-size: 0.9em;
             }
         }
     </style>
@@ -946,7 +899,7 @@
         <div class="container navbar">
             <div class="logo-container">
                 <a href="#home">
-                    <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753973637/photo_2025-07-31_11-05-57_tdaqpi.jpg" alt="JurisPró Marketing Logo (Ademir Rodrigues)" class="logo">
+                    <img src="https://res.cloudinary.com/dwu4r8y1a/image/upload/v1753975584/photo_2025-07-31_12-26-06_snzu95.jpg" alt="JurisPró Marketing Logo (Ademir Rodrigues)" class="logo">
                 </a>
             </div>
             <nav>
@@ -998,7 +951,7 @@
         <section class="fade-in-section" style="background-color: var(--white);">
             <div class="container">
                 <h2>Uma Jornada Pelo Sucesso Ético na Advocacia Digital.</h2>
-                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em todo o Brasil se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com experiência consolidada em marketing e uma visão aprofundada do universo jurídico, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
+                <p>A JurisPró Marketing nasceu da percepção de Ademir Rodrigues, CEO e fundador, da crescente necessidade de advogados e escritórios de advocacia em todo o Brasil se posicionarem no ambiente digital de forma eficaz, mas, acima de tudo, ética. Com **experiência consolidada em marketing e uma visão aprofundada do universo jurídico**, percebemos a lacuna de um marketing especializado que não só atraísse clientes, mas que também preservasse a dignidade e a reputação da profissão.</p>
                 <p>Desde então, nos dedicamos a construir pontes entre a advocacia e o mundo digital, sempre priorizando a conformidade com as normas da OAB e a entrega de resultados que realmente fazem a diferença para a carreira de nossos clientes.</p>
             </div>
         </section>
@@ -1142,16 +1095,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="testimonials-section fade-in-section" style="background-color: var(--white);">
-            <div class="container">
-                <h2>Advogados Satisfeitos, Advocacias em Destaque.</h2>
-                <div class="testimonial-item">
-                    <p>"A JurisPró Marketing realmente transformou nossa presença online. Além de entenderem as regras da OAB, são extremamente estratégicos e profissionais. Notamos um aumento significativo no nosso reconhecimento. Recomendo!"</p>
-                    <span class="testimonial-author">— Dra. [Nome do Advogado/Escritório], [Área de Atuação], Brasil.</span>
-                </div>
-                </div>
         </section>
 
         <section class="faq-section fade-in-section">
